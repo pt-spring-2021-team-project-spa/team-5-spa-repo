@@ -25,8 +25,8 @@ public class PlanetRestController {
         return planetRepo.findById(id);
     }
     @GetMapping(value = "/api/planets/{solarSystem}")
-        public Planet getSolarSystem(@PathVariable SolarSystem solarSystem){
-        return planetRepo.findBySolarSystem(solarSystem).get();
+    public Optional<Planet> getSolarSystem(@PathVariable SolarSystem solarSystem){
+        return planetRepo.findBySolarSystem(solarSystem);
     }
 
 }
