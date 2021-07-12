@@ -1,16 +1,16 @@
 package org.wecancodeit.mysteryeducator.rest.controllers;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.wecancodeit.mysteryeducator.models.Planet;
 import org.wecancodeit.mysteryeducator.models.SolarSystem;
 import org.wecancodeit.mysteryeducator.repositories.PlanetRepository;
 
 import javax.annotation.Resource;
 import java.util.Collection;
+import java.util.Optional;
 
 @RestController
+@CrossOrigin
 public class PlanetRestController {
 
     @Resource
@@ -20,11 +20,11 @@ public class PlanetRestController {
     public Collection<Planet> getPlanets(){
         return (Collection<Planet>) planetRepo.findAll();
     }
-    @GetMapping("/api/planets/{id}")
-    public Planet getPlanet(@PathVariable Long id){
-        return planetRepo.findById(id).get();
+    @RequestMapping(value = "/api/planets/{id}")
+    public Optional<Planet> getPlanet(@PathVariable Long id){
+        return planetRepo.findById(id);
     }
-    @GetMapping("/api/planets/{solarSystem}")
+    @GetMapping(value = "/api/planets/{solarSystem}")
         public Planet getSolarSystem(@PathVariable SolarSystem solarSystem){
         return planetRepo.findBySolarSystem(solarSystem).get();
     }
