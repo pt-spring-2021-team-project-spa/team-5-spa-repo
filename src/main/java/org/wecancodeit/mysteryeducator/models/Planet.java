@@ -50,12 +50,13 @@ public class Planet {
     }
 
     public Planet(){}
-    public Planet(String name, String diameter, String distanceFromSun, String avgTemperature, String description){
+    public Planet(String name, String diameter, String distanceFromSun, String avgTemperature, String description, SolarSystem solarSystem){
         this.name = name;
         this.diameter = diameter;
         this.distanceFromSun = distanceFromSun;
         this.avgTemperature = avgTemperature;
         this.description = description;
+        this.solarSystem = solarSystem;
     }
 
     @Override
