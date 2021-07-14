@@ -1,0 +1,10 @@
+{
+	"extends": "@parcel/config-default",
+	"transformers": {
+		"*.jpg": ["@parcel/transformer-raw"]
+        "*.jpeg": ["@parcel/transformer-raw"]
+        "*.png": ["@parcel/transformer-raw"]
+        "*.gif": ["@parcel/transformer-raw"]
+	}
+}
+
