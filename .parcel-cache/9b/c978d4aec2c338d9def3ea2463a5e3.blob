@@ -1,0 +1,53 @@
+"use strict";
+var _Header = _interopRequireDefault(require("./components/Header"));
+var _Footer = _interopRequireDefault(require("./components/Footer"));
+var _Planet = _interopRequireDefault(require("./components/Planet"));
+var _Planets = _interopRequireDefault(require("./components/Planets"));
+var _api = _interopRequireDefault(require("./api-actions/api"));
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+buildPage();
+function buildPage() {
+  header();
+  footer();
+  navPlanets();
+}
+function header() {
+  var headerElem = document.querySelector(".header");
+  headerElem.innerHTML = (0, _Header["default"])();
+}
+function footer() {
+  var footerElem = document.querySelector(".footer");
+  footerElem.innerHTML = (0, _Footer["default"])();
+}
+function navPlanets() {
+  var planetsLi = document.querySelector(".nav_menu_planets");
+  planetsLi.addEventListener("click", function () {
+    var app = document.querySelector("#app");
+    _api["default"].getRequest("http://localhost:8080/api/planets");
+  });
+}
+var students = document.querySelector(".students");
+students.addEventListener("click", function () {
+  fetch("http://localhost:8080/api/planets").then(function (response) {
+    return response.json();
+  }).then(function (jsonData) {
+    return console.log(jsonData);
+  })["catch"](function (err) {
+    return console.log(err);
+  });
+});
+function renderPlanetInfo() {
+  var app = document.querySelector("#app");
+  app.addEventListener("click", function () {
+    if (event.target.classList.contains("planet-name")) {
+      var planetUrl = event.target.parentElement.querySelector("#planetId").value;
+      _api["default"].getRequest(planetUrl, function (planet) {
+        app.innerHTML = (0, _Planet["default"])(planet);
+      });
+    }
+  });
+}

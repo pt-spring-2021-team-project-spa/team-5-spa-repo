@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = Header;
+function Header() {
+  return "\n    <ul class='nav_menu'>\n    <button class='nav_menu_home>Home</button>\n    <button class='nav_menu_students>Students</button>\n    <button class='nav_menu_parents>Parents</button>\n    <button class='nav_menu_solar_system>Our Solar System</button>\n    <button class='nav_menu_planets>Planets</button>\n    </ul>\n    ";
+}

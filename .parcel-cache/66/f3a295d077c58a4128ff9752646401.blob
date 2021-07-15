@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Side App</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header"></header>
+      <div id="app">
+        <h1>Jackr Mystery Educator</h1>
+      </div>
+    </div>
+<footer class="footer"></footer>
+    <script src="/index.HASH_REF_b48a3e8f69d54de8ff72554c155d0af3.js"></script>
+  </body>
+</html>
+
