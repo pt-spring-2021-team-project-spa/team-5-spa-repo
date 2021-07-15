@@ -1,6 +1,7 @@
 package org.wecancodeit.mysteryeducator.rest.controllers;
 
 import org.springframework.web.bind.annotation.*;
+import org.wecancodeit.mysteryeducator.Enum.Grade;
 import org.wecancodeit.mysteryeducator.models.Student;
 import org.wecancodeit.mysteryeducator.repositories.StudentRepository;
 
@@ -20,5 +21,9 @@ public class StudentRestController {
     @GetMapping("api/students/{id}")
     public Student getStudent(@PathVariable Long id){
         return studentRepo.findById(id).get();
+    }
+    @GetMapping("api/students/{grade}")
+    public Student getStudentByGrade(@PathVariable Grade grade){
+        return (Student) studentRepo.findByGrade(grade);
     }
 }
