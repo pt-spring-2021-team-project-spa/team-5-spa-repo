@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Rover</title>
+</head>
+<body>
+<h1 class="normalH">NASA Nars Rover Images</h1>
+<p>
+<h2>The Mars Rovers</h2>
+
+This web page displays image data gathered by NASA's Curiosity, Opportunity, and Spirit rovers on
+Mars. Each rover has its own set of photos stored in the database, which can be queried separately.
+Photos are organized by the sol (Martian rotation or day) on which they were taken,
+counting up from the rover's landing date.
+
+</p>
+
+<div>
+    <form>
+        <fieldset>
+            <legend>Date Input (YYYY-MM-DD)</legend>
+            <label for="dateValue"></label>
+            <input type="text" name="dateValue" id="dateValue">
+            <p>Rover Selection
+                <br/>
+                <label>
+                    <input type="radio" id="button1" name="rover" value="curioustity"/>Curioustity</label>
+                <label>
+                    <input type="radio" id="button2" name="rover" value="opportunity"/>Opportunity</label>
+                <label>
+                    <input type="radio" id="button3" name="rover" value="spirit"/>Spirit</label>
+            </p>
+            <input type="submit" id="dateInput">
+
+        </fieldset>
+
+    </form>
+    <div>
+        <p>Tips:
+        <ul>
+            <li>Most rovers did not start taking photos until several days after landing.</li>
+            <li>Curiosity landed on: 2012-08-06</li>
+            <li>Opportunity landed on: 2004-01-25</li>
+            <li>Spirit landed on: 2004-01-04</li>
+        </ul>
+        </p>
+        <h2>Image Results</h2>
+        <span>Image Retrieval Status: </span><span id="imageStatus"></span>
+        <br>
+        <span>Rover Name: </span><span id="roverCaption"></span>
+        <br>
+        <span>Landing Date: </span><span id="landingCaption"></span>
+        <br>
+        <span>Expected End Date: </span><span id="endingCaption"></span>
+        <br>
+        <h2>Rover Image</h2>
+        <img id="imageID" src=""/>
+    </div>
+</div>
+    <script src="roverApi.js"></script>
+</body>
+</html>

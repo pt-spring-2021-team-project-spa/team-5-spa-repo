@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>NASA EPIC</title>
+  </head>
+  <body>
+    <h1 class="normalH">NASA EPIC</h1>
+    <h2>WHAT IS EPIC?</h2>
+    <p>
+      EPIC (Earth Polychromatic Imaging Camera) is a 10-channel
+      spectroradiometer spacecraft. EPIC provides 10 narrow band spectral images
+      of the entire sunlit face of Earth using a 2048 x 2048 pixel Charge
+      Coupled Device) detector coupled to a 30-cm aperture Cassegrain telescope.
+    </p>
+    <p>
+      The DSCOVR spacecraft is located at the Earth-Sun Lagrange-1 (L-1) point
+      giving EPIC a unique angular perspective that will be used in science
+      applications to measure ozone, aerosols, cloud reflectivity, cloud height,
+      vegetation properties, and UV radiation estimates at Earth's surface.
+    </p>
+
+    <div>
+      <form>
+        <fieldset>
+          <legend>Date Input (YYYY-MM-DD)</legend>
+          <label for="dateValue">Date: </label>
+          <input type="text" name="dateValue" id="dateValue" />
+          <input type="submit" id="dateInput" />
+        </fieldset>
+      </form>
+      <div>
+        <p>TIP: The first acquired images start on 2015-09-01</p>
+        <h2>Image Result</h2>
+        <span>Image Retrieval Status: </span><span id="imageStatus"></span>
+        <br />
+        <span>Image Caption: </span><span id="imageCaption"></span>
+        <br />
+        <br />
+        <h2>EPIC Image</h2>
+        <img id="imageID" src="" />
+      </div>
+    </div>
+    <script src="epicApi.js"></script>
+  </body>
+</html>
