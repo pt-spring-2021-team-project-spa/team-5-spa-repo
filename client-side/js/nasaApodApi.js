@@ -1,6 +1,6 @@
-let searchButton = document.querySelector("#search");
+let imageButton = document.querySelector("#image");
 
-searchButton.addEventListener("click", () => {
+imageButton.addEventListener("click", () => {
   console.log("button clicked");
   sendApiRequest();
 });
@@ -17,11 +17,5 @@ async function sendApiRequest() {
 }
 function useApiData(data) {
   document.querySelector("#content").innerHTML += data.explanation;
-  if (data.type = "video") {
-        document.querySelector("#content").innerHTML+=
-        "NO IMAGE AVAILABLE TODAY";
-        }else {
-    document.querySelector("#content").innerHTML +=
-       '<img src="${data.url}"';
-        }
+  document.querySelector("#content").innerHTML += `<img src="${data.url}">`;
 }
