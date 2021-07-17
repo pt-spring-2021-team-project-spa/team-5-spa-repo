@@ -5,11 +5,14 @@ export default function Header(){
         <div class="header__parentsMenu_backdrop"></div>
         <div class="header__parentsBtn_content">
             <ul class="header__parents_menu">
+                <li class="header__parents_grownups">Grownups
+                    <span class="menu__close"><i class="fas fa-times"></i></span>
+                </li>
                 <li class="header__parents_aboutUs">About Us</li>
-                <li class="header__parent_contactUs">Contact Us</li>
-                <li class="header__parent_faq">FAQ</li>
-                <li class="header__parent_terms">Terms & Conditions</li>
-                <li class="header__parent_privacy">Privacy Policy</li>
+                <li class="header__parents_contactUs">Contact Us</li>
+                <li class="header__parents_faq">FAQ</li>
+                <li class="header__parents_terms">Terms & Conditions</li>
+                <li class="header__parents_privacy">Privacy Policy</li>
             </ul>
         </div>
     </div>
