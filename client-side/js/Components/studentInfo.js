@@ -1,19 +1,14 @@
 export default function StudentInfo(studentInfo) {
   return `
     <h1>Welcome Students To JackR Learning Center</h1>
+    <p>Student Name: ${studentInfo.name}</p>
+    <p>Student Grade: ${studentInfo.grade}</p>
+    <p>Guardian Name: ${studentInfo.parent}</p>
     <ul class="students">
     ${studentInfo
-      .map((student) => {
+      .map((parent) => {
         return `
-        <li class="aStudent_name">Student Name:${student.name}</li>
-     
-        `;
-      })
-      .join("")}
-    ${studentInfo
-      .map((parentInfo) => {
-        return `
-      <li>Guardian Name: ${parentInfo.name}</li>
+      <li>Guardian Name: ${parent}</li>
       `;
       })
       .join("")}

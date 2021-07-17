@@ -1,10 +1,11 @@
 export default function ParentInfo(parentInfo) {
   return `
-    <h1>${parentInfo.name}</h1>
-    ${parentInfo.results
+    <h1>Welcome Guardian!</h1>
+    ${parentInfo
       .map((guardian) => {
         return `
-        <h3>${guardian.name}</h3>
+        <h3>Guardian Name:${guardian.name}</h3>
+        <p>Student Name:${guardian.students}</p>
         `;
       })
       .join("")}

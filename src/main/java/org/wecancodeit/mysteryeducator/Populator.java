@@ -50,10 +50,10 @@ public class Populator implements CommandLineRunner {
         planetRepo.save(pluto);
 
 
-        Student testStudent1 = new Student("testName1",Grade.FIRST);
+        Student testStudent1 = new Student("Myles",Grade.FIRST);
         studentRepo.save(testStudent1);
 
-        Parent testParent1 = new Parent("testParent",testStudent1);
+        Parent testParent1 = new Parent("Jordan",testStudent1);
         parentRepo.save(testParent1);
 
 

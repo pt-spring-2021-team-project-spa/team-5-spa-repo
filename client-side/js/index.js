@@ -7,6 +7,7 @@ import Learning from "./Components/Learning";
 import About from "./Components/About";
 import crud from "./crud/crud";
 import StudentInfo from "./Components/studentInfo";
+import ParentInfo from "./rendering/parentInfo";
 
 buildPage();
 
@@ -35,8 +36,21 @@ function navStudents() {
   studentsElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     crud.getRequest("http://localhost:8080/api/students", (students) => {
-      app.innerHTML = StudentInfo(students);
+      app.innerHTML = Students(students);
     });
+    renderStudentInfo();
+  });
+}
+function renderStudentInfo() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("student-name")) {
+      const studentId =
+        event.target.parentElem.querySelector("#studentId").value;
+      crud.getRequest(studentId, (student) => {
+        app.innerHTML = StudentInfo(student);
+      });
+    }
   });
 }
 
@@ -44,8 +58,21 @@ function navParents() {
   const parentsElem = document.querySelector(".nav-list__parents");
   parentsElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
-    crud.getRequest("http://localhost:8080/api/parents",(parents))
-    
+    crud.getRequest("http://localhost:8080/api/parents", (parents) => {
+      app.innerHTML = Parents(parents);
+    });
+    renderParentInfo();
+  });
+}
+function renderParentInfo() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("parent-name")) {
+      const parentId = event.target.parentElem.querySelector("#parentId").value;
+      crud.getRequest(parentId, (parent) => {
+        app.innerHTML = ParentInfo(parent);
+      });
+    }
   });
 }
 
@@ -56,8 +83,6 @@ function navLearning() {
     app.innerHTML = Learning();
   });
 }
-
-
 
 function navAbout() {
   const aboutElem = document.querySelector(".parents-about");
