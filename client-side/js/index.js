@@ -40,6 +40,15 @@ function navStudents() {
   });
 }
 
+function navParents() {
+  const parentsElem = document.querySelector(".nav-list__parents");
+  parentsElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    crud.getRequest("http://localhost:8080/api/parents",(parents))
+    
+  });
+}
+
 function navLearning() {
   const learningElem = document.querySelector(".nav-list__learning");
   learningElem.addEventListener("click", () => {
@@ -48,13 +57,7 @@ function navLearning() {
   });
 }
 
-function navParents() {
-  const parentsElem = document.querySelector(".nav-list__parents");
-  parentsElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    app.innerHTML = Parents();
-  });
-}
+
 
 function navAbout() {
   const aboutElem = document.querySelector(".parents-about");

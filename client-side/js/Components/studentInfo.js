@@ -5,9 +5,16 @@ export default function StudentInfo(studentInfo) {
     ${studentInfo
       .map((student) => {
         return `
-        <li class="aStudent_name">${student.name}</li>
-        <li class="student_grade">${student.grade}</li>
+        <li class="aStudent_name">Student Name:${student.name}</li>
+     
         `;
+      })
+      .join("")}
+    ${studentInfo
+      .map((parentInfo) => {
+        return `
+      <li>Guardian Name: ${parentInfo.name}</li>
+      `;
       })
       .join("")}
     </ul>
