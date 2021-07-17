@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = Footer;
+function Footer() {
+  return "\n    <ul class=\"footer\">\n    <li>FAQ</li>\n    <li>About</li>\n    <li>Contact</li>\n    <li>Terms</li>\n    </ul>";
+}

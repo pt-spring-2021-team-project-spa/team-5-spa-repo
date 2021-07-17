@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = Planet;
+function Planet(planet) {
+  return ("\n<h1>").concat(planet.name, "</h1>\n<p>Diameter: ").concat(planet.diameter, "</p>\n<p>Distance From Sun: ").concat(planet.distanceFromSun, "</p>\n<p>Average Temperature: ").concat(planet.avgTemperature, "</p>\n<p>Description: ").concat(planet.description, "</p>\n<p>Solar System: ").concat(planet.solarSystem, "</p>\n.join('')\n");
+}

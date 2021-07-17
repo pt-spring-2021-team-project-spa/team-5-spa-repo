@@ -1,9 +1,6 @@
 package org.wecancodeit.mysteryeducator.models;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.ManyToMany;
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Objects;
@@ -15,9 +12,13 @@ public class Student {
     @GeneratedValue
     private Long id;
     private String name;
-    private String grade;
+
     @ManyToMany(mappedBy = "students")
     private Collection<Parent> parents;
+
+    @Enumerated(EnumType.STRING)
+    private Grade gradeLevel;
+
 
     public Long getId() {
         return id;
@@ -27,16 +28,20 @@ public class Student {
         return name;
     }
 
-    public String getGrade() {
-        return grade;
-    }
-
     public Collection<Parent> getParents() { return parents; }
 
+    @Enumerated(EnumType.STRING )
+    public Grade getGradeLevel() {
+        return gradeLevel;
+    }
+
     public Student(){}
-    public Student(String name, String grade){
+
+
+
+    public Student(String name, Grade gradeLevel){
         this.name = name;
-        this.grade = grade;
+        this.gradeLevel = getGradeLevel();
         parents = new ArrayList<>();
     }
 
@@ -55,4 +60,3 @@ public class Student {
 
 
 }
-

@@ -1,0 +1,68 @@
+"use strict";
+var _Header = _interopRequireDefault(require("./Components/Header"));
+var _Footer = _interopRequireDefault(require("./Components/Footer"));
+var _Parents = _interopRequireDefault(require("./Components/Parents"));
+var _Home = _interopRequireDefault(require("./Components/Home"));
+var _Students = _interopRequireDefault(require("./Components/Students"));
+var _Learning = _interopRequireDefault(require("./Components/Learning"));
+var _About = _interopRequireDefault(require("./Components/About"));
+var _api = _interopRequireDefault(require("./api-actions/api.js"));
+function _interopRequireDefault(obj) {
+  return obj && obj.__esModule ? obj : {
+    "default": obj
+  };
+}
+buildPage();
+function buildPage() {
+  header();
+  footer();
+  navStudents();
+  navParents();
+  navLearning();
+  navHome();
+  navAbout();
+}
+function header() {
+  var headerElem = document.querySelector(".header");
+  headerElem.innerHTML = (0, _Header["default"])();
+}
+function footer() {
+  var footerElem = document.querySelector(".footer");
+  footerElem.innerHTML = (0, _Footer["default"])();
+}
+function navStudents() {
+  var studentsElem = document.querySelector(".nav-list__students");
+  studentsElem.addEventListener("click", function () {
+    var app = document.querySelector("#app");
+    app.innerHTML = (0, _Students["default"])();
+  });
+}
+function navLearning() {
+  var learningElem = document.querySelector(".nav-list__learning");
+  learningElem.addEventListener("click", function () {
+    var app = document.querySelector("#app");
+    app.innerHTML = (0, _Learning["default"])();
+    apiActions.getRequest("http://localhost:8080/api/planet/w");
+  });
+}
+function navParents() {
+  var parentsElem = document.querySelector(".nav-list__parents");
+  parentsElem.addEventListener("click", function () {
+    var app = document.querySelector("#app");
+    app.innerHTML = (0, _Parents["default"])();
+  });
+}
+function navAbout() {
+  var aboutElem = document.querySelector(".parents-about");
+  aboutElem.addEventListener("click", function () {
+    var app = document.querySelector("#app");
+    app.innerHTML = (0, _About["default"])();
+  });
+}
+function navHome() {
+  var homeElem = document.querySelector(".nav-list__home");
+  homeElem.addEventListener("click", function () {
+    var app = document.querySelector("#app");
+    app.innerHTML = (0, _Home["default"])();
+  });
+}

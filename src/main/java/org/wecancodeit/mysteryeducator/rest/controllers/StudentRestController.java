@@ -9,6 +9,7 @@ import java.util.Collection;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin
 public class StudentRestController {
     @Resource
     private StudentRepository studentRepo;
