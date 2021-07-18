@@ -1,5 +1,5 @@
 import planetImg from "../../assets/planetsCard.jpg";
-export default function Home() {
+function Home() {
   return `
     <h1>Home Page Test</h1>
     <div class="cards">
@@ -27,3 +27,6 @@ export default function Home() {
     </div>
     `;
 }
+export default {
+  Home,
+};

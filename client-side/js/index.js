@@ -1,10 +1,12 @@
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
-import Parents from './Components/Parents';
-import Home from './Components/Home';
-import Students from './Components/Students';
+import Parents from "./Components/Parents";
+import Home from "./Components/Home.js";
+import Students from "./Components/Students";
 import Learning from "./Components/Learning";
-import About from './Components/About';
+import About from "./Components/About";
+import StudentInfo from "./Components/rendering/studentInfo";
+import ParentInfo from "./Components/rendering/parentInfo";
 
 buildPage();
 
@@ -28,22 +30,20 @@ function footer() {
   footerElem.innerHTML = Footer();
 }
 
-function navStudents(){
-    const studentsElem = document.querySelector(".nav-list__students");
-    studentsElem.addEventListener("click", () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = Students();
-      });
-
+function navStudents() {
+  const studentsElem = document.querySelector(".nav-list__students");
+  studentsElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = Students();
+  });
 }
 
-function navLearning(){
-    const learningElem = document.querySelector(".nav-list__learning");
-    learningElem.addEventListener("click", () => {
-        const app = document.querySelector("#app");
-        app.innerHTML = Learning();
-      });
-
+function navLearning() {
+  const learningElem = document.querySelector(".nav-list__learning");
+  learningElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = Learning();
+  });
 }
 
 function navParents() {
@@ -55,18 +55,17 @@ function navParents() {
 }
 
 function navAbout() {
-    const aboutElem = document.querySelector(".parents-about");
-    aboutElem.addEventListener("click", () => {
-      const app = document.querySelector("#app");
-      app.innerHTML = About();
-    });
-  }
+  const aboutElem = document.querySelector(".parents-about");
+  aboutElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = About();
+  });
+}
 
-
-function navHome(){
-    const homeElem = document.querySelector(".nav-list__home");
-    homeElem.addEventListener("click", () => {
-const app = document.querySelector('#app');
-app.innerHTML = Home();
-    });
+function navHome() {
+  const homeElem = document.querySelector(".nav-list__home");
+  homeElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = Home();
+  });
 }
