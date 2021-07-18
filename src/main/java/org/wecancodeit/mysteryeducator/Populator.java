@@ -2,10 +2,11 @@ package org.wecancodeit.mysteryeducator;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
-import org.wecancodeit.mysteryeducator.models.Planet;
-import org.wecancodeit.mysteryeducator.models.SolarSystem;
+import org.wecancodeit.mysteryeducator.models.*;
+import org.wecancodeit.mysteryeducator.repositories.ParentRepository;
 import org.wecancodeit.mysteryeducator.repositories.PlanetRepository;
 import org.wecancodeit.mysteryeducator.repositories.SSRepository;
+import org.wecancodeit.mysteryeducator.repositories.StudentRepository;
 
 import javax.annotation.Resource;
 
@@ -16,6 +17,11 @@ public class Populator implements CommandLineRunner {
     SSRepository ssRepo;
     @Resource
     PlanetRepository planetRepo;
+    @Resource
+    StudentRepository studentRepo;
+    @Resource
+    ParentRepository parentRepo;
+
 
     @Override
     public void run(String... args) throws Exception {
@@ -43,6 +49,12 @@ public class Populator implements CommandLineRunner {
         planetRepo.save(neptune);
         planetRepo.save(pluto);
 
+
+        Student testStudent1 = new Student("Myles",Grade.FIRST);
+        studentRepo.save(testStudent1);
+
+        Parent testParent1 = new Parent("Jordan",testStudent1);
+        parentRepo.save(testParent1);
 
 
 

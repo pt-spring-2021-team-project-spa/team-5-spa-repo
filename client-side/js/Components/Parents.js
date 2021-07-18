@@ -1,12 +1,17 @@
-
-export default function Parents(){
-
-return`
-<h1>Parents Test Page</h1>
-<ul class="parents-nav">
-<li class="parents-about">About</li>
-<li class="parents-contact">Contact</li>
-</ul>
-`;
+export default function Parents(parents) {
+  return `
+  <h1>Welcome Guardians</h1>
+  <ul>
+  ${parents
+    .map((parent) => {
+    return `
+      <li class="parentInfo">
+      <h3 class="parent-name">Guardian Name: ${parent.name}</h3>
+      <h3 class="parent-name">Student Name: ${parent.students}</h3>
+      <input type='hidden' id='parentId' value='${parent.id}'>
+      </li>
+      `;
+  })}
+  </ul>
+  `;
 }
-
