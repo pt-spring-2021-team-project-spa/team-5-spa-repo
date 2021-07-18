@@ -20,6 +20,8 @@ export default function Header(){
         <li class="nav-list__home">Home</li>
         <li class="nav-list__grades">Grades 5-8</li>
         <li class="nav-list__games">Games</li>
+        <li class="nav-list__students">Students</li>
+        <li class="nav-list__parents">Parents</li>
         <li class="nav-list__learning">Learning</li>
     </ul>
     `;

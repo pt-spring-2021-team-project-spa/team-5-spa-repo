@@ -5,6 +5,7 @@ import Home from './Components/Home';
 import Students from './Components/Students';
 import Learning from "./Components/Learning";
 import About from './Components/About';
+import Grades14 from './Components/Grades14';
 
 buildPage();
 
@@ -16,6 +17,7 @@ function buildPage() {
   navLearning();
   navHome();
   navAbout();
+  navGrades();
 }
 
 function header() {
@@ -54,19 +56,26 @@ function navParents() {
   });
 }
 
+function navGrades() {
+  const gradesElem = document.querySelector(".nav-list__grades");
+  gradesElem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Grades14();
+  });
+}
+
 function navAbout() {
     const aboutElem = document.querySelector(".parents-about");
     aboutElem.addEventListener("click", () => {
-      const app = document.querySelector("#app");
-      app.innerHTML = About();
-    });
-  }
+    const app = document.querySelector("#app");
+    app.innerHTML = About();
+  });
+}
 
-
-function navHome(){
-    const homeElem = document.querySelector(".nav-list__home");
-    homeElem.addEventListener("click", () => {
-const app = document.querySelector('#app');
-app.innerHTML = Home();
-    });
+function navHome() {
+  const homeElem = document.querySelector(".nav-list__home");
+  homeElem.addEventListener("click", () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Home();
+  });
 }
