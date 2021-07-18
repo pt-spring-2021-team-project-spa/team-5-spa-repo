@@ -1,0 +1,8 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = Header;
+function Header() {
+  return "\n    <ul class = \"nav-list\">\n    <li class=\"nav-list__home\">Home</li>\n    <li class=\"nav-list__students\">Students</li>\n    <li class=\"nav-list__parents\">Parents</li>\n    <li class=\"nav-list__learning\">Learning</li>\n    </ul>\n    ";
+}

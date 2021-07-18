@@ -6,20 +6,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
-import java.util.Collection;
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 public class Parent {
     @Id
     @GeneratedValue
     private Long id;
-    private final String name;
+    private String name;
     @ManyToMany
     @JsonIgnore
-    private final Set<Student> students;
+    private Collection<Student> students;
 
     public Long getId() {
         return id;
@@ -32,10 +29,12 @@ public class Parent {
         return students;
     }
 
-    public Parent (String name){
+    public Parent (String name, Collection<Student> students){
         this.name = name;
-        this.students = new HashSet<>();
+        this.students = students;
     }
+
+    public Parent(){}
 
     @Override
     public boolean equals(Object o) {

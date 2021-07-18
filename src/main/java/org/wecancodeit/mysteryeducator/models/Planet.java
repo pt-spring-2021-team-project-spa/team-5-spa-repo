@@ -14,6 +14,7 @@ public class Planet {
     @GeneratedValue
     private Long id;
     private String name;
+    private String imageUrl;
     private String diameter;
     private String distanceFromSun;
     private String avgTemperature;
@@ -26,8 +27,16 @@ public class Planet {
         return solarSystem;
     }
 
+    public Long getId() {
+        return id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
     }
 
     public String getDiameter() {
@@ -42,16 +51,14 @@ public class Planet {
         return avgTemperature;
     }
 
-    public Long getId() {
-        return id;
-    }
     public String getDescription() {
         return description;
     }
 
     public Planet(){}
-    public Planet(String name, String diameter, String distanceFromSun, String avgTemperature, String description, SolarSystem solarSystem){
+    public Planet(String name, String imageUrl, String diameter, String distanceFromSun, String avgTemperature, String description, SolarSystem solarSystem){
         this.name = name;
+        this.imageUrl = imageUrl;
         this.diameter = diameter;
         this.distanceFromSun = distanceFromSun;
         this.avgTemperature = avgTemperature;
@@ -71,6 +78,7 @@ public class Planet {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 
 
 }
