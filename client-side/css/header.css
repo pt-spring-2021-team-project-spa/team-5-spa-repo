@@ -1,0 +1,57 @@
+.header__section_parents {
+    position: sticky;
+    text-align: right;
+}
+
+.header__parents_button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    margin: auto;
+    padding-bottom: 1rem;
+}
+
+.header__parentsMenu_backdrop {
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+.header__parents_menu {
+    background: white;
+    display: none;
+    height: 100vh;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 200px;
+    z-index: 1;
+}
+
+.header__parents_grownups {
+    background-color: #303c6c;
+    color: white;
+    font-size: 20px;
+    padding: 1rem;
+    text-align: left;
+}
+
+.menu__close {
+    cursor: pointer;
+    margin-left: 3.5rem;
+}
+
+.header__parents_aboutUs, .header__parents_contactUs, .header__parents_faq, .header__parents_terms, .header__parents_privacy {
+    border-bottom: #303c6c solid 1px;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    text-align: left;
+}
