@@ -1,6 +1,7 @@
 import Header from "./Components/Header";
 import Footer from "./Components/Footer";
 import Parents from "./Components/Parents";
+import Planets from "./Components/Planets";
 import Home from "./Components/Home";
 import Students from "./Components/Students";
 import Learning from "./Components/Learning";
@@ -9,8 +10,8 @@ import Grades14 from "./Components/Grades14";
 import crud from "./crud/crud";
 import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
-import Planets from "./Components/Planets";
 import PlanetInfo from "./rendering/planetInfo";
+
 
 buildPage();
 
@@ -119,9 +120,17 @@ function navGrades() {
   });
 }
 
+function navGrades() {
+  const gradesElem = document.querySelector(".nav-list__grades");
+  gradesElem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Grades14();
+  });
+}
+
 function navAbout() {
-  const aboutElem = document.querySelector(".parents-about");
-  aboutElem.addEventListener("click", () => {
+    const aboutElem = document.querySelector(".parents-about");
+    aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
   });
@@ -134,4 +143,6 @@ function navHome() {
     app.innerHTML = Home();
   });
 }
+
+
 
