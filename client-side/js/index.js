@@ -5,9 +5,12 @@ import Home from "./Components/Home";
 import Students from "./Components/Students";
 import Learning from "./Components/Learning";
 import About from "./Components/About";
+import Grades14 from "./Components/Grades14";
 import crud from "./crud/crud";
-import StudentInfo from "./Components/studentInfo";
+import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
+import Planets from "./Components/Planets";
+import PlanetInfo from "./rendering/planetInfo";
 
 buildPage();
 
@@ -19,6 +22,7 @@ function buildPage() {
   navLearning();
   navHome();
   navAbout();
+  navGrades();
 }
 
 function header() {
@@ -44,11 +48,41 @@ function navStudents() {
 function renderStudentInfo() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
-    if (event.target.classList.contains("student-name")) {
+    if (event.target.classList.contains(".student-name")) {
       const studentId =
         event.target.parentElem.querySelector("#studentId").value;
       crud.getRequest(studentId, (student) => {
         app.innerHTML = StudentInfo(student);
+      });
+    }
+  });
+}
+
+function student_parent_sql() {
+  const sql = document.querySelector(".nav-list__grades");
+  sql.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    crud.getRequest('"http://localhost:8080/students/11/parents"');
+  });
+}
+
+function navLearning() {
+  const learningElem = document.querySelector(".nav-list__learning");
+  learningElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+      app.innerHTML = Planets(planets);
+    });
+    renderPlanetInfo();
+  });
+}
+function renderPlanetInfo() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains(".planet-info")) {
+      const planetId = event.target.parentElem.querySelector("#planetId").value;
+      crud.getRequest(planetId, (planet) => {
+        app.innerHTML = PlanetInfo(planet);
       });
     }
   });
@@ -64,6 +98,7 @@ function navParents() {
     renderParentInfo();
   });
 }
+
 function renderParentInfo() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
@@ -76,11 +111,11 @@ function renderParentInfo() {
   });
 }
 
-function navLearning() {
-  const learningElem = document.querySelector(".nav-list__learning");
-  learningElem.addEventListener("click", () => {
+function navGrades() {
+  const gradesElem = document.querySelector(".nav-list__grades");
+  gradesElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
-    app.innerHTML = Learning();
+    app.innerHTML = Grades14();
   });
 }
 
@@ -99,3 +134,4 @@ function navHome() {
     app.innerHTML = Home();
   });
 }
+

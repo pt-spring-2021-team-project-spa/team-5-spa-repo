@@ -1,6 +1,7 @@
 package org.wecancodeit.mysteryeducator.rest.controllers;
 
 import org.springframework.web.bind.annotation.*;
+import org.wecancodeit.mysteryeducator.models.Parent;
 import org.wecancodeit.mysteryeducator.models.Student;
 import org.wecancodeit.mysteryeducator.repositories.StudentRepository;
 
@@ -21,5 +22,9 @@ public class StudentRestController {
     @GetMapping("api/students/{id}")
     public Student getStudent(@PathVariable Long id){
         return studentRepo.findById(id).get();
+    }
+    @GetMapping("api/students/{id}/{parent}")
+    public Optional<Student> getGuardian(@PathVariable Parent parent){
+        return studentRepo.findById(parent.getId());
     }
 }

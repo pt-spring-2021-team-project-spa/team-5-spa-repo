@@ -29,9 +29,9 @@ public class Parent {
         return students;
     }
 
-    public Parent (String name, Student...students){
+    public Parent (String name, Collection<Student> students){
         this.name = name;
-        this.students = new ArrayList<Student>(Arrays.asList(students));
+        this.students = students;
     }
 
     public Parent(){}

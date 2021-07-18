@@ -30,7 +30,7 @@ public class Student {
 
     public Collection<Parent> getParents() { return parents; }
 
-    @Enumerated(EnumType.STRING )
+
     public Grade getGradeLevel() {
         return gradeLevel;
     }
@@ -41,7 +41,7 @@ public class Student {
 
     public Student(String name, Grade gradeLevel){
         this.name = name;
-        this.gradeLevel = getGradeLevel();
+        this.gradeLevel = gradeLevel;
         parents = new ArrayList<>();
     }
 

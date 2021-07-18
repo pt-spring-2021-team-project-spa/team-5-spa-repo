@@ -1,16 +1,18 @@
-function ParentInfo(parentInfo){
-    return `
-    <h1>Welcome Parents To JackR Learning Center</h1>
-    <ul class="students">
-    ${parentInfo
-      .map((parent) => {
+export default function PlanetInfo(planetInfo) {
+  return `
+    <h1>Our Solar System Is Amazing! Take a Peak!</h1>
+    ${planetInfo
+      .map((planet) => {
         return `
-        <li class="aStudent_name">${parent.name}</li>
-        <li class="student_grade">${student.grade}</li>
+        <p>Planet: ${planet.name}</p>
+        <p>Diameter: ${planet.diameter}</p>
+        <p>Distance From Sun: ${planet.distanceFromSun}</p>
+        <p>Average Temperature: ${planet.avgTemperature}</p>
+        <p>Description: ${planet.description}</p>
+        <p>Solar System: ${planet.solarSystem}</p>
         `;
       })
       .join("")}
-    </ul>
+    
     `;
-    `
 }

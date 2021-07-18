@@ -7,10 +7,12 @@ import org.wecancodeit.mysteryeducator.models.Student;
 @JsonFormat(shape = JsonFormat.Shape.OBJECT)
 public enum Grade {
 
-    FIRST("1"), SECOND("2"), THIRD("3"), FOURTH("4"), FIFTH("5"),
-    SIXTH("6"),SEVENTH("7"),EIGTH("8");
+    FIRST("1st"), SECOND("2nd"), THIRD("3rd"), FOURTH("4th"), FIFTH("5th"),
+    SIXTH("6th"),SEVENTH("7th"),EIGTH("8th");
     private Student name;
-    private String commandString;
+
+
+    private final String commandString;
 
     Grade(String commandString){
         this.commandString = commandString;
@@ -21,7 +23,7 @@ public enum Grade {
         return commandString;
     }
 
-    @JsonValue
+
     @Override
     public String toString() {
         return "Grade{" +
