@@ -30,7 +30,7 @@ public class Populator implements CommandLineRunner {
         SolarSystem ourSS = new SolarSystem("Solar System","Milky Way","description...");
         ssRepo.save(ourSS);
 
-        Planet mercury = new Planet("Mercury","images/mercury.jpg","3,030 Miles", "35 million Miles", "800 Degrees F","description...",ourSS);
+        Planet mercury = new Planet("Mercury","http://src/main/resources/static/images/earth.jpg","3,030 Miles", "35 million Miles", "800 Degrees F","description...",ourSS);
         Planet venus = new Planet("Venus","images.venus.jpg","7,520 Miles","67 million Miles","847 Degrees F.","description...",ourSS);
         Planet earth = new Planet("Earth","images/earth.jpg","7,917 Miles","93 million Miles","61 Degrees F.","description...",ourSS);
         Planet mars = new Planet("Mars","images/mars.jpg","4,212 Miles","156 million Miles","-81 Degrees F.","description...",ourSS);

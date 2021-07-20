@@ -12,7 +12,6 @@ import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
 
-
 buildPage();
 
 function buildPage() {
@@ -23,7 +22,7 @@ function buildPage() {
   navLearning();
   navHome();
   navAbout();
-  navGrades();
+  navGrades14();
 }
 
 function header() {
@@ -56,14 +55,6 @@ function renderStudentInfo() {
         app.innerHTML = StudentInfo(student);
       });
     }
-  });
-}
-
-function student_parent_sql() {
-  const sql = document.querySelector(".nav-list__grades");
-  sql.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    crud.getRequest('"http://localhost:8080/students/11/parents"');
   });
 }
 
@@ -112,25 +103,17 @@ function renderParentInfo() {
   });
 }
 
-function navGrades() {
-  const gradesElem = document.querySelector(".nav-list__grades");
+function navGrades14() {
+  const gradesElem = document.querySelector("#button14");
   gradesElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Grades14();
   });
 }
 
-function navGrades() {
-  const gradesElem = document.querySelector(".nav-list__grades");
-  gradesElem.addEventListener('click', () => {
-    const app = document.querySelector('#app');
-    app.innerHTML = Grades14();
-  });
-}
-
 function navAbout() {
-    const aboutElem = document.querySelector(".parents-about");
-    aboutElem.addEventListener("click", () => {
+  const aboutElem = document.querySelector(".parents-about");
+  aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
   });
@@ -143,6 +126,3 @@ function navHome() {
     app.innerHTML = Home();
   });
 }
-
-
-

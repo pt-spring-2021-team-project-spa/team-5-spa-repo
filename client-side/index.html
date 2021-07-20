@@ -6,17 +6,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
     <link rel="stylesheet" href="./css/layout.css" />
-    <link rel="stylesheet" href="./css/header.css">
-    <script src="https://kit.fontawesome.com/746e027e38.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/header.css" />
+    <script
+      src="https://kit.fontawesome.com/746e027e38.js"
+      crossorigin="anonymous"
+    ></script>
     <title>JacKr Learning</title>
   </head>
   <body>
     <header class="header"></header>
     <div id="app">
       <h1>Welcome to the Learning Center!</h1>
-      <a href="#" class="button">1st - 4th Grade</a>
-      <br />
-      <a href="#" class="button">5th - 8th Grade</a>
+      <h2>Little Kids</h2>
+      <section class="add_student">
+        <input
+          type="text"
+          class="add_student_name"
+          placeholder="Enter Student Name"
+        />
+        <input
+          type="text"
+          class="add_student_grade"
+          placeholder="Enter Grade"
+        />
+        <button class="submit">Continue</button>
+      </section>
+      <select name="gradeLevel" id="grade">
+        <option value="0">Select Your Grade</option>
+        <option value="1">1st Grade</option>
+        <option value="2">2nd Grade</option>
+        <option value="3">3rd Grade</option>
+        <option value="4">4th Grade</option>
+      </select>
+      <h3>Big Kids</h3>
+      <select name="bigKids" id="bigKids">
+        <option value="0">Select Your Grade</option>
+        <option value="5">5th Grade</option>
+        <option value="6">6th Grade</option>
+        <option value="7">7th Grade</option>
+        <option value="8">8th Grade</option>
+      </select>
     </div>
     <footer class="footer"></footer>
     <script src="./js/index.js"></script>
@@ -24,4 +53,4 @@
   </body>
 </html>
 
-<img src="./assets/planetsCard.jpg" alt="" srcset="">
+<img src="./assets/planetsCard.jpg" alt="" srcset="" />

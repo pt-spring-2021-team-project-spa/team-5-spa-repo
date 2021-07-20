@@ -1,5 +1,5 @@
 export default function Grades14(){
     return `
-    <h1>Grades Page Test</h1>
+    <h1>Welcome Student!</h1>
     `;
 }
