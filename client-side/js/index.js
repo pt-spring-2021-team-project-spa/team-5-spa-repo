@@ -37,7 +37,7 @@ function footer() {
 }
 
 function navStudents() {
-  const studentsElem = document.querySelector(".nav-list__students");
+  const studentsElem = document.querySelector(".header__parents_students");
   studentsElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     crud.getRequest("http://localhost:8080/api/students", (students) => {
@@ -90,7 +90,7 @@ function renderPlanetInfo() {
 }
 
 function navParents() {
-  const parentsElem = document.querySelector(".nav-list__parents");
+  const parentsElem = document.querySelector(".header__parents_portal");
   parentsElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     crud.getRequest("http://localhost:8080/api/parents", (parents) => {
