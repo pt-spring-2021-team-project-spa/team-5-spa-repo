@@ -3,6 +3,13 @@
     text-align: right;
 }
 
+.header__title {
+    color: white;
+    margin: 0px;
+    padding-bottom: 1rem;
+    text-align: left;
+}
+
 .header__parents_button {
     background: none;
     border: none;
@@ -10,7 +17,6 @@
     cursor: pointer;
     font-size: 16px;
     margin: auto;
-    padding-bottom: 1rem;
 }
 
 .header__parentsMenu_backdrop {
@@ -30,7 +36,7 @@
     position: fixed;
     right: 0px;
     top: 0px;
-    width: 200px;
+    width: 250px;
     z-index: 1;
 }
 
@@ -44,11 +50,12 @@
 
 .menu__close {
     cursor: pointer;
-    margin-left: 3.5rem;
+    margin-left: 6.5rem;
 }
 
-.header__parents_aboutUs, .header__parents_contactUs, .header__parents_faq, .header__parents_terms, .header__parents_privacy {
+.header__parents_portal, .header__parents_students, .header__parents_aboutUs, .header__parents_contactUs, .header__parents_faq, .header__parents_terms, .header__parents_privacy {
     border-bottom: #303c6c solid 1px;
+    cursor: pointer;
     margin-left: 1rem;
     margin-right: 1rem;
     padding-bottom: 1rem;

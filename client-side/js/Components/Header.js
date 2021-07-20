@@ -1,13 +1,15 @@
 export default function Header(){
     return`
-    <div class="header__section_parents">
-        <button class="header__parents_button">Grownups</button>
+    <div class="header__section_parents">   
+    <button class="header__parents_button">Grownups</button>
         <div class="header__parentsMenu_backdrop"></div>
         <div class="header__parentsBtn_content">
             <ul class="header__parents_menu">
                 <li class="header__parents_grownups">Grownups
                     <span class="menu__close"><i class="fas fa-times"></i></span>
                 </li>
+                <li class="header__parents_portal">Grownup's Portal</li>
+                <li class="header__parents_students">Your Student</li>
                 <li class="header__parents_aboutUs">About Us</li>
                 <li class="header__parents_contactUs">Contact Us</li>
                 <li class="header__parents_faq">FAQ</li>
@@ -16,12 +18,14 @@ export default function Header(){
             </ul>
         </div>
     </div>
+    <h1 class="header__title">Space JacKr</h1> 
     <ul class = "nav-list">
         <li class="nav-list__home">Home</li>
-        <li class="nav-list__grades">Grades 5-8</li>
+        <li class="nav-list__grades">
+            <p><i class="fas fa-graduation-cap"></i></p>
+            <p>Grades 5-8</p>
+        </li>
         <li class="nav-list__games">Games</li>
-        <li class="nav-list__students">Students</li>
-        <li class="nav-list__parents">Parents</li>
         <li class="nav-list__learning">Learning</li>
     </ul>
     `;
