@@ -95,3 +95,11 @@ h4 {
   height: 150px;
   border-radius: 50%;
 }
+.start {
+  width: 15rem;
+  word-wrap: break-word;
+  border-radius: 50px;
+  background-color: #f4976c;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
