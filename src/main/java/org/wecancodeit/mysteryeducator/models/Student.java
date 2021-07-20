@@ -19,6 +19,13 @@ public class Student {
     @ManyToMany(mappedBy = "students")
     private Collection<Parent> parents;
 
+<<<<<<< Updated upstream
+=======
+
+    private Grade gradeLevel;
+
+
+>>>>>>> Stashed changes
     public Long getId() {
         return id;
     }

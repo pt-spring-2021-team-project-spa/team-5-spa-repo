@@ -23,15 +23,16 @@ public class Populator implements CommandLineRunner {
         SolarSystem ourSS = new SolarSystem("Solar System","Milky Way","description...");
         ssRepo.save(ourSS);
 
-        Planet mercury = new Planet("Mercury","3,030 Miles", "35 million Miles", "800 Degrees F","description...",ourSS);
-        Planet venus = new Planet("Venus","7,520 Miles","67 million Miles","847 Degrees F.","description...",ourSS);
-        Planet earth = new Planet("Earth","7,917 Miles","93 million Miles","61 Degrees F.","description...",ourSS);
-        Planet mars = new Planet("Mars","4,212 Miles","156 million Miles","-81 Degrees F.","description...",ourSS);
-        Planet jupiter = new Planet("Jupiter","86,881 Miles","468 million Miles","-238 Degrees F.","description...",ourSS);
-        Planet saturn = new Planet("Saturn","72,367 Miles","924 million Miles","-285 Degrees F.","description...",ourSS);
-        Planet uranus = new Planet("Uranus","31,518 Miles","1.8 billion Miles","-353 Degrees F.","description...",ourSS);
-        Planet neptune = new Planet("Neptune","30,599 Miles","2.78 billion Miles","-373 Degrees F.","description...",ourSS);
-        Planet pluto = new Planet("Pluto","1,476 Miles", "39.5 Astronomical Units (AU)","-400 Degrees F.","decription...",ourSS);
+
+        Planet mercury = new Planet("Mercury","http://java/org/wecancodeit/mysteryeducator/images/earth.jpg","3,030 Miles", "35 million Miles", "800 Degrees F","description...",ourSS);
+        Planet venus = new Planet("Venus","images.venus.jpg","7,520 Miles","67 million Miles","847 Degrees F.","description...",ourSS);
+        Planet earth = new Planet("Earth","images/earth.jpg","7,917 Miles","93 million Miles","61 Degrees F.","description...",ourSS);
+        Planet mars = new Planet("Mars","images/mars.jpg","4,212 Miles","156 million Miles","-81 Degrees F.","description...",ourSS);
+        Planet jupiter = new Planet("Jupiter","images/jupiter.png","86,881 Miles","468 million Miles","-238 Degrees F.","description...",ourSS);
+        Planet saturn = new Planet("Saturn","images/saturn.jpg","72,367 Miles","924 million Miles","-285 Degrees F.","description...",ourSS);
+        Planet uranus = new Planet("Uranus","images.uranus.jpg","31,518 Miles","1.8 billion Miles","-353 Degrees F.","description...",ourSS);
+        Planet neptune = new Planet("Neptune","images/neptune.jpg","30,599 Miles","2.78 billion Miles","-373 Degrees F.","description...",ourSS);
+        Planet pluto = new Planet("Pluto","images/pluto.jpg","1,476 Miles", "39.5 Astronomical Units (AU)","-400 Degrees F.","decription...",ourSS);
 
         planetRepo.save(mercury);
         planetRepo.save(venus);
