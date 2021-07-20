@@ -1,97 +1,97 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    font-family: Arial, Helvetica, sans-serif;
-  }
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-  a{
-      text-decoration: none;
-      font-size: 35px;
-      color: #f4976c;
-  }
+a {
+  text-decoration: none;
+  font-size: 35px;
+  color: #f4976c;
+}
+.add_student {
+  padding: 7px;
+}
 
-  a:hover{
-   color: #303c6c; 
-  }
+a:hover {
+  color: #303c6c;
+}
 
-  body{
-      background-color: #7481b8; ;
-      background-image: url(../assets/spaceBackground.jpg);
-      background-position: center;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4 {
-    margin: 3rem;
-    color: #303c6c;
-    font-family: Arial, Helvetica, sans-serif
-  }
-  #app {
-      color: lightslategray;
-    background-color: #d2fdff;
-    border-radius: 75px;
-  }
-  
-  .page-image {
-    height: 50%;
-    width: 75%;
-  }
-  
-  .nav-list li {
-      border: 5px solid #d2fdff;
-    background-color: #303c6c;
-    color: white;
-    width: 90px; 
-    height: 90px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center; 
-    justify-content: center;
-  }
-  
-  .nav-list li:hover {
-    background-color:#f4976c ;
-    transition: 0.2s;
-    transform: translateY(-8px);
-  }
-  
+body {
+  background-color: #7481b8;
+  background-image: url(../assets/spaceBackground.jpg);
+  background-position: center;
+}
 
+h1,
+h2,
+h3,
+h4 {
+  margin: 3rem;
+  color: #303c6c;
+  font-family: Arial, Helvetica, sans-serif;
+}
+#app {
+  color: lightslategray;
+  background-color: #d2fdff;
+  border-radius: 75px;
+}
 
-  .footer {
-      font-size:18px;
-      color: #d2fdff;
-  }
+.page-image {
+  height: 50%;
+  width: 75%;
+}
 
-  .footer li:hover{
-      color: #f4976c;
-  }
+.nav-list li {
+  border: 5px solid #d2fdff;
+  background-color: #303c6c;
+  color: white;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .card{
-      width: 15rem;
-      word-wrap: break-word;
-      border-radius: 50px;
-      background-color: #f4976c;
-      padding-top: 10px;
-      padding-bottom: 10px;   
-  }
-  
- .cards{
-      margin: 10px;
-      display: flex;
-      justify-content: space-around;
-      gap: 10px;
-  }
+.nav-list li:hover {
+  background-color: #f4976c;
+  transition: 0.2s;
+  transform: translateY(-8px);
+}
 
-  .cardInfo{
-      color: white;
-  }
+.footer {
+  font-size: 18px;
+  color: #d2fdff;
+}
 
-.planetCardImg{
-    border: 5px solid #d2fdff;
-    height: 150px;
-    border-radius: 50%;
+.footer li:hover {
+  color: #f4976c;
+}
 
+.card {
+  width: 15rem;
+  word-wrap: break-word;
+  border-radius: 50px;
+  background-color: #f4976c;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.cards {
+  margin: 10px;
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+.cardInfo {
+  color: white;
+}
+
+.planetCardImg {
+  border: 5px solid #d2fdff;
+  height: 150px;
+  border-radius: 50%;
 }

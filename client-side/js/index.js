@@ -11,6 +11,7 @@ import crud from "./crud/crud";
 import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
+import AddStudent from "./Components/AddStudent";
 
 buildPage();
 
@@ -104,10 +105,10 @@ function renderParentInfo() {
 }
 
 function navGrades14() {
-  const gradesElem = document.querySelector("#button14");
+  const gradesElem = document.querySelector(".nav_list__grades");
   gradesElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    app.innerHTML = Grades14();
+    
+    gradesElem.innerHTML = AddStudent();
   });
 }
 
