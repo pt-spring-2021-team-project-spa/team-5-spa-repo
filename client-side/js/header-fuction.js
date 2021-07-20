@@ -10,13 +10,19 @@ var faqBtn = document.querySelector(".header__parents_faq");
 var termsBtn = document.querySelector(".header__parents_terms");
 var privacyBtn = document.querySelector(".header__parents_privacy");
 var startBtn = document.querySelector(".start");
+var startMenu = document.querySelector(".menu");
 
-function start() {
-  console.log("button firing!");
+function openStartMenu() {
+  startMenu.style.display = "block";
+}
+
+function hideStartButton() {
+  startBtn.style.display = "none";
 }
 
 startBtn.addEventListener("click", () => {
-  start();
+  openStartMenu();
+  hideStartButton();
 });
 
 function openParentsMenu() {
