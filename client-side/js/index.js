@@ -23,7 +23,7 @@ function buildPage() {
   navLearning();
   navHome();
   navAbout();
-  navGrades14();
+  navStart();
 }
 
 function header() {
@@ -56,6 +56,16 @@ function renderStudentInfo() {
         app.innerHTML = StudentInfo(student);
       });
     }
+  });
+}
+
+function navStart() {
+  const welcomeElem = document.querySelector(".nav-list__welcome__center");
+  welcomeElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    crud.getRequest("http://localhost:8080/api/students", (students) => {
+      app.innerHTML = AddStudent(students);
+    });
   });
 }
 
@@ -105,10 +115,12 @@ function renderParentInfo() {
 }
 
 function navGrades14() {
-  const gradesElem = document.querySelector(".nav_list__grades");
+  const gradesElem = document.querySelector(".nav-list__grades");
   gradesElem.addEventListener("click", () => {
-    
-    gradesElem.innerHTML = AddStudent();
+    const app = document.querySelector("#app");
+    crud.getRequest("http://localhost:8080/api/students", (students) => {
+      app.innerHTML = AddStudent(students);
+    });
   });
 }
 

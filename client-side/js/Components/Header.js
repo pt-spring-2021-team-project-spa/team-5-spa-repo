@@ -1,5 +1,5 @@
-export default function Header(){
-    return`
+export default function Header() {
+  return `
     <div class="header__section_parents">   
     <button class="header__parents_button">Grownups</button>
         <div class="header__parentsMenu_backdrop"></div>
@@ -20,6 +20,7 @@ export default function Header(){
     </div>
     <h1 class="header__title">Space JacKr</h1> 
     <ul class = "nav-list">
+        <li class="nav-list__welcome__center">Start Here</li>
         <li class="nav-list__home">Home</li>
         <li class="nav-list__grades">
             <p><i class="fas fa-graduation-cap"></i></p>
