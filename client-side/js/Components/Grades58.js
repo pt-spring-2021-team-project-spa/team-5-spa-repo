@@ -1,3 +1,4 @@
+import planetImg from "../../assets/planetsCard.jpg";
 export default function Grades58(){
     return `
     <h1>Home Page Test</h1>

@@ -22,10 +22,10 @@ function buildPage() {
   navStudents();
   navParents();
   navHome();
-  navAbout();
-  navStart();
-  navGrades14();
   navGrades58();
+  navGrades14();
+  //navAbout();
+  navStart();
 }
 
 function header() {
@@ -38,6 +38,30 @@ function footer() {
   footerElem.innerHTML = Footer();
 }
 
+function navGrades58() {
+  const grades58Elem = document.querySelector(".nav-list__grades58");
+  grades58Elem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = Grades58();
+  });
+}
+
+function navGrades14() {
+  const gradesElem = document.querySelector(".nav-list__grades14");
+  gradesElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = Grades14();
+  });
+}
+
+function navHome() {
+  const homeElem = document.querySelector(".nav-list__home");
+  homeElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = Home();
+  });
+}
+
 function navStudents() {
   const studentsElem = document.querySelector(".header__parents_students");
   studentsElem.addEventListener("click", () => {
@@ -48,9 +72,10 @@ function navStudents() {
     renderStudentInfo();
   });
 }
+
 function renderStudentInfo() {
   const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
+  app.addEventListener("click", (event) => {
     if (event.target.classList.contains(".student-name")) {
       const studentId =
         event.target.parentElem.querySelector("#studentId").value;
@@ -83,7 +108,7 @@ function navLearning() {
 }
 function renderPlanetInfo() {
   const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
+  app.addEventListener("click", (event) => {
     if (event.target.classList.contains(".planet-info")) {
       const planetId = event.target.parentElem.querySelector("#planetId").value;
       crud.getRequest(planetId, (planet) => {
@@ -106,7 +131,7 @@ function navParents() {
 
 function renderParentInfo() {
   const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
+  app.addEventListener("click", (event) => {
     if (event.target.classList.contains("parent-name")) {
       const parentId = event.target.parentElem.querySelector("#parentId").value;
       crud.getRequest(parentId, (parent) => {
@@ -116,36 +141,10 @@ function renderParentInfo() {
   });
 }
 
-function navGrades14() {
-  const gradesElem = document.querySelector(".nav-list__grades14");
-  gradesElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    crud.getRequest("http://localhost:8080/api/students", (students) => {
-      app.innerHTML = AddStudent(students);
-    });
-  });
-}
-
-function navGrades58() {
-  const grades58Elem = document.querySelector('.nav-list__grades58');
-  grades58Elem.addEventListener('click', () => {
-    const app = document.querySelector('#app');
-    app.innerHTML = Grades58();
-  });
-}
-
 function navAbout() {
   const aboutElem = document.querySelector(".parents-about");
   aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
-  });
-}
-
-function navHome() {
-  const homeElem = document.querySelector(".nav-list__home");
-  homeElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    app.innerHTML = Home();
   });
 }
