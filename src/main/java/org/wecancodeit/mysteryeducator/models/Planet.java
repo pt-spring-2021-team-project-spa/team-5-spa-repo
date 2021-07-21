@@ -15,6 +15,7 @@ public class Planet {
     private Long id;
     private String name;
     private String imageUrl;
+    private String url;
     private String diameter;
     private String distanceFromSun;
     private String avgTemperature;
@@ -56,9 +57,10 @@ public class Planet {
     }
 
     public Planet(){}
-    public Planet(String name, String imageUrl, String diameter, String distanceFromSun, String avgTemperature, String description, SolarSystem solarSystem){
+    public Planet(String name, String imageUrl,String url, String diameter, String distanceFromSun, String avgTemperature, String description, SolarSystem solarSystem){
         this.name = name;
         this.imageUrl = imageUrl;
+        this.url = url;
         this.diameter = diameter;
         this.distanceFromSun = distanceFromSun;
         this.avgTemperature = avgTemperature;
@@ -80,5 +82,7 @@ public class Planet {
     }
 
 
-
+    public String getUrl() {
+        return url;
+    }
 }

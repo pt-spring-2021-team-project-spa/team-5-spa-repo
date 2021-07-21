@@ -1,3 +1,4 @@
+import Home from "./Home";
 export default function Planets(planets) {
   return `
       <h1>Our Solar System Is Amazing! Take a Peak!</h1>
@@ -9,12 +10,13 @@ export default function Planets(planets) {
           <h3 class="planet-name">Planet: ${planet.name}</h3>
           <h4 class="planet-size">Diameter: ${planet.diameter}</h4>
           <p class="planet-distance">Distance From Sun: ${planet.distanceFromSun}</p>
-          <p class="planet-temp">Average Temperature: ${planet.avgTemperature}</p>
+          <p class="planet-temp">Average Temperature: ${planet.temperature}</p>
           <p class="planet-description">Description: ${planet.description}</p>
-          <input type="hidden" id='planetId' value='${planet.id}'>
+          <input type="button" id='planetId' value='${planet.url}'>
           </li>
           `;
       })}
       </ul>
+      
       `;
 }
