@@ -12,6 +12,7 @@ import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
 import AddStudent from "./Components/AddStudent";
+import Grades58 from "./Components/Grades58";
 
 buildPage();
 
@@ -20,10 +21,11 @@ function buildPage() {
   footer();
   navStudents();
   navParents();
-  navLearning();
   navHome();
   navAbout();
   navStart();
+  navGrades14();
+  navGrades58();
 }
 
 function header() {
@@ -115,12 +117,20 @@ function renderParentInfo() {
 }
 
 function navGrades14() {
-  const gradesElem = document.querySelector(".nav-list__grades");
+  const gradesElem = document.querySelector(".nav-list__grades14");
   gradesElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     crud.getRequest("http://localhost:8080/api/students", (students) => {
       app.innerHTML = AddStudent(students);
     });
+  });
+}
+
+function navGrades58() {
+  const grades58Elem = document.querySelector('.nav-list__grades58');
+  grades58Elem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Grades58();
   });
 }
 
