@@ -26,3 +26,8 @@ dependencies {
 test {
 	useJUnitPlatform()
 }
+bootRun {
+	if (project.hasProperty('args')) {
+		args project.args.split(',')
+	}
+}

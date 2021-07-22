@@ -12,6 +12,8 @@ public class Student {
     @GeneratedValue
     private Long id;
     private String name;
+    private  double weight;
+
 
     @ManyToMany(mappedBy = "students")
     private Collection<Parent> parents;
@@ -30,6 +32,10 @@ public class Student {
 
     public Collection<Parent> getParents() { return parents; }
 
+    public double getWeight() {
+        return weight;
+    }
+
 
     public Grade getGradeLevel() {
         return gradeLevel;
@@ -39,9 +45,10 @@ public class Student {
 
 
 
-    public Student(String name, Grade gradeLevel){
+    public Student(String name, Grade gradeLevel, double weight){
         this.name = name;
         this.gradeLevel = gradeLevel;
+        this.weight = weight;
         parents = new ArrayList<>();
     }
 

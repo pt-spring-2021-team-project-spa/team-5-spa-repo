@@ -63,6 +63,8 @@
     text-align: left;
 }
 
-.nav-list__home, .nav-list__grades, .nav-list__games, .nav-list__learning {
+.nav-list__home, .nav-list__grades14, .nav-list__grades58, .nav-list__games {
     cursor: pointer;
+    display: flex;
+    flex-direction: column;
 }
