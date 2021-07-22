@@ -32,10 +32,9 @@ export default function Header() {
             <p><i class="fas fa-graduation-cap"></i></p>
             <p>Grades 5-8</p>
         </li>
-        <li class="nav-list__games">
-            <p><i class="fas fa-puzzle-piece"></i></p>
-            <p>Games</p>
-        </li>
+        <li class="nav-list__games">Games</li>
+        <li class="nav-list__learning">Learning</li>
+        <li class="nav-list__apod">APOD</li>
     </ul>
     `;
 }
