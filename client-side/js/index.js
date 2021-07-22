@@ -52,14 +52,19 @@ function shuffleCards() {
   app.addEventListener("click", () => {
     if (event.target.classList.contains("cardInfo")) {
       const card = document.createElement("div");
-      card.setAttribute("h1", "mystery-card");
+      card.setAttribute("class", "mystery-card");
       crud.getRequest("http://localhost:8080/api/planets", (planets) => {
         card.innerHTML = Planets(planets);
       });
       app.appendChild(card);
+      hideCards();
     }
   });
   renderPlanetInfo();
+}
+function hideCards() {
+  const cards = document.querySelector(".cards");
+  cards.style.display = "none";
 }
 
 function navGrades14() {
