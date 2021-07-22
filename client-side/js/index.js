@@ -13,7 +13,7 @@ import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
 import AddStudent from "./Components/AddStudent";
 import Grades58 from "./Components/Grades58";
-import cards from "./arrays/mystery_array_grade58";
+import cards from "./Components/mystery_array_grade58";
 import Apod from "./Components/Apod";
 
 buildPage();
