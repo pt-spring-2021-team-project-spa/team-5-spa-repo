@@ -11,9 +11,10 @@ import crud from "./crud/crud";
 import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
-import AddStudent from "./Components/AddStudent";
-import Grades58 from "./Components/Grades58";
-import cards from "./arrays/mystery_array_grade58";
+import Apod from "./Components/Apod";
+import FemaleArt from "./Components/FemaleArt";
+import apiActions from "./api-actions/api.js";
+import api from "./api-actions/api.js";
 
 buildPage();
 
@@ -23,10 +24,10 @@ function buildPage() {
   navStudents();
   navParents();
   navHome();
-  navGrades58();
-  navGrades14();
-  navAbout();
-  navStart();
+  // navAbout();
+  navGrades();
+  navApod();
+  navFemaleArt();
 }
 
 function header() {
@@ -225,4 +226,74 @@ function navAbout() {
     const app = document.querySelector("#app");
     app.innerHTML = About();
   });
+}
+
+function navFemaleArt() {
+  const femaleArtElem = document.querySelector(".nav-list__femaleArt");
+  femaleArtElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    const getWomanUrl = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=woman"
+    const apiLink = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
+
+    fetch(`${getWomanUrl}`)
+      .then(response => response.json())
+      .then(data => {
+        return data;
+      })
+      .then(data => {
+        let objectIDs = data.objectIDs;
+        let objectID = objectIDs[Math.floor(Math.random() * objectIDs.length)]; // Select a random Id
+        console.log(objectID);
+
+        fetch(`${apiLink}` + objectID)
+          .then(resp => resp.json())
+          .then(data => {
+            console.log(data);
+            app.innerHTML = FemaleArt(data);
+      
+            let title = document.querySelector(".title");
+            title.innerHTML = `${data.title} `;
+
+            let department = document.querySelector('.department');
+            department.innerHTML = `Department: ${data.department} `
+
+            if (`${data.culture}` === '') {
+            } else {
+              let culture = document.querySelector('.culture');
+              culture.innerHTML = `Culture: ${data.culture} `
+            }
+
+            if (`${data.period}` === '') {
+            } else {
+              let period = document.querySelector('.period');
+              period.innerHTML = `Period: ${data.period}`
+            }
+
+            let objectEndDate = document.querySelector('.objectEndDate');
+            objectEndDate.innerHTML = `Date: ${data.objectEndDate} `
+
+            let primaryImage = document.querySelector(".photo");
+            primaryImage.innerHTML = `<img src="${data.primaryImage}" class="primaryImage" > `;
+
+            let artistDisplayName = document.querySelector('.artistDisplayName');
+            artistDisplayName.innerHTML = `${data.artistDisplayName} `
+
+            let artistNationality = document.querySelector('.artistNationality');
+            artistNationality.innerHTML = `${data.artistNationality} `
+
+            let artistDisplayBio = document.querySelector('.artistDisplayBio');
+            artistDisplayBio.innerHTML = `${data.artistDisplayBio} `
+
+          })
+    
+        let button = document.getElementById('nextButton')
+        button.addEventListener('click', () => {
+          window.setTimeout(() => {
+            window.location.reload(true)
+          }, 200)
+        })
+      
+      });
+  
+  })
 }
