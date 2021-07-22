@@ -51,9 +51,15 @@ function shuffleCards() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
     if (event.target.classList.contains("cardInfo")) {
-      console.log("cards selected");
+      const card = document.createElement("div");
+      card.setAttribute("h1", "mystery-card");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
     }
   });
+  renderPlanetInfo();
 }
 
 function navGrades14() {
