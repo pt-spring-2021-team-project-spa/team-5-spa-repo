@@ -13,6 +13,7 @@ import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
 import AddStudent from "./Components/AddStudent";
 import Grades58 from "./Components/Grades58";
+import cards from "./arrays/mystery_array_grade58";
 
 buildPage();
 
@@ -24,7 +25,7 @@ function buildPage() {
   navHome();
   navGrades58();
   navGrades14();
-  //navAbout();
+  navAbout();
   navStart();
 }
 
@@ -43,6 +44,15 @@ function navGrades58() {
   grades58Elem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Grades58();
+  });
+  shuffleCards();
+}
+function shuffleCards() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo")) {
+      console.log("cards selected");
+    }
   });
 }
 
