@@ -12,6 +12,7 @@ import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
 import Apod from "./Components/Apod";
+import FemaleArt from "./Components/FemaleArt";
 import apiActions from "./api-actions/api.js";
 import api from "./api-actions/api.js";
 
@@ -27,6 +28,7 @@ function buildPage() {
   // navAbout();
   navGrades();
   navApod();
+  navFemaleArt();
 }
 
 function header() {
@@ -160,3 +162,33 @@ function navApod() {
     );
   });
 }
+
+function navFemaleArt() {
+  const femaleArtElem = document.querySelector(".nav-list__femaleArt");
+  femaleArtElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    const getWomanUrl = "https://collectionapi.metmuseum.org/public/collection/v1/search?q=woman"
+const apiLink = "https://collectionapi.metmuseum.org/public/collection/v1/objects/"
+
+fetch(`${getWomanUrl}`)  
+  .then(response => response.json())
+  .then(data => {
+    console.log('1:', data.objectIDs);
+    return data;
+  })
+  .then(data => {
+    let objectIDs = data.objectIDs; 
+    let objectID = objectIDs[Math.floor(Math.random() * objectIDs.length)]; // Select a random Id
+    console.log(objectID);
+
+    fetch(`${apiLink}` + objectID) 
+      .then(resp => resp.json())
+      .then(data => {
+        console.log(data);
+    
+          });
+      })
+      
+  })
+
+  }

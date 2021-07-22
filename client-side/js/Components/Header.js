@@ -1,5 +1,5 @@
-export default function Header(){
-    return`
+export default function Header() {
+  return `
     <div class="header__section_parents">   
     <button class="header__parents_button">Grownups</button>
         <div class="header__parentsMenu_backdrop"></div>
@@ -28,6 +28,7 @@ export default function Header(){
         <li class="nav-list__games">Games</li>
         <li class="nav-list__learning">Learning</li>
         <li class="nav-list__apod">APOD</li>
+        <li class="nav-list__femaleArt">Female Art</li>
     </ul>
     `;
 }
