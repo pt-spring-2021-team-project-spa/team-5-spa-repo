@@ -12,6 +12,9 @@ import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
 import Apod from "./Components/Apod";
+import apiActions from "./api-actions/api.js";
+import api from "./api-actions/api.js";
+
 buildPage();
 
 function buildPage() {
@@ -21,7 +24,7 @@ function buildPage() {
   navParents();
   navLearning();
   navHome();
- // navAbout();
+  // navAbout();
   navGrades();
   navApod();
 }
@@ -122,8 +125,8 @@ function navGrades() {
 
 function navGrades() {
   const gradesElem = document.querySelector(".nav-list__grades");
-  gradesElem.addEventListener('click', () => {
-    const app = document.querySelector('#app');
+  gradesElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
     app.innerHTML = Grades14();
   });
 }
@@ -142,16 +145,18 @@ function navHome() {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
   });
-};
-
+}
 
 function navApod() {
   const apodElem = document.querySelector(".nav-list__apod");
   apodElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
-    apiActions.getRequest("https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX", (apod) => {
-      console.log(apod);
-      app.innerHTML = Apod(apod);
-    });
-  })
-};
+    apiActions.getRequest(
+      "https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX",
+      (apod) => {
+        console.log(apod);
+        app.innerHTML = Apod(apod);
+      }
+    );
+  });
+}

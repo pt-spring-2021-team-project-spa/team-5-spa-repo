@@ -27,6 +27,7 @@ export default function Header(){
         </li>
         <li class="nav-list__games">Games</li>
         <li class="nav-list__learning">Learning</li>
+        <li class="nav-list__apod">APOD</li>
     </ul>
     `;
 }
