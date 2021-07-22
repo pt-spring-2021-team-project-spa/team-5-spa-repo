@@ -50,7 +50,7 @@ function navGrades58() {
 function shuffleCards() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
-    if (event.target.classList.contains("cardInfo")) {
+    if (event.target.classList.contains("cardInfo1")) {
       const card = document.createElement("div");
       card.setAttribute("class", "mystery-card");
       crud.getRequest("http://localhost:8080/api/planets", (planets) => {
