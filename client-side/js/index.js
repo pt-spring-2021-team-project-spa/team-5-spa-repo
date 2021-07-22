@@ -14,6 +14,7 @@ import PlanetInfo from "./rendering/planetInfo";
 import AddStudent from "./Components/AddStudent";
 import Grades58 from "./Components/Grades58";
 import cards from "./arrays/mystery_array_grade58";
+import Apod from "./Components/Apod";
 
 buildPage();
 
@@ -49,6 +50,19 @@ function navGrades58() {
   showCard2();
   showCard3();
   showCard4();
+}
+function navApod() {
+  const apodElem = document.querySelector(".nav-list__apod");
+  apodElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    apiActions.getRequest(
+      "https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX",
+      (apod) => {
+        console.log(apod);
+        app.innerHTML = Apod(apod);
+      }
+    );
+  });
 }
 function showCard1() {
   const app = document.querySelector("#app");
