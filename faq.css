@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: #579ff7;
+  font-size: 14px;
+  background-image: url(client-side/assets/spaceBackground.jpg);
+}
+.container {
+  width: 70%;
+  margin: 50px auto;
+}
+.faq {
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-basis: 60%;
+  padding: 40px 60px;
+  margin-bottom: 15px;
+}
+h1 {
+  margin-bottom: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+.faq p {
+  margin-left: 20px;
+  font-size: medium;
+  font-weight: bold;
+}
