@@ -227,7 +227,7 @@ function navGrades58() {
 function planetCard() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
-    if (event.target.classList.contains("planetCard")) {
+    if (event.target.classList.contains("planetCardImg")) {
       const card = document.createElement("div");
       console.log("Planets button")
       card.setAttribute("class","planetsCard");
@@ -245,7 +245,7 @@ function planetCard() {
 function spaceCard() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
-    if (event.target.classList.contains("spaceCard")) {
+    if (event.target.classList.contains("spaceCardImg")) {
       const card = document.createElement("div");
       console.log("Space Button")
         card.innerHTML = Space();
@@ -258,7 +258,7 @@ function spaceCard() {
 function artCard() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
-    if (event.target.classList.contains("artCard")) {
+    if (event.target.classList.contains("artCardImg")) {
       const card = document.createElement("div");
       console.log("Art Button")
         card.innerHTML = Art();
@@ -271,7 +271,7 @@ function artCard() {
 function mysteryCard() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
-    if (event.target.classList.contains("mysteryCard")) {
+    if (event.target.classList.contains("mysteryCardImg")) {
       const card = document.createElement("div");
       console.log("Mystery Button")
         card.innerHTML = Mystery();
@@ -283,29 +283,8 @@ function mysteryCard() {
 
 
 function hideCards() {
-  const cards = document.querySelector(".cards");
-  const title = document.querySelector(".title")
+  const cards = document.querySelector("#grades-app");
   cards.style.display = "none";
-  title.style.display="none";
 }
 
-
-// function navGrades58() {
-//   const grades58Elem = document.querySelector(".grades58Button");
-//   grades58Elem.addEventListener("click", () => {
-//     const app = document.querySelector("#app");
-//     app.innerHTML = Grades58();
-//   });
-//   grade58Select();
-// }
-
-
-
-// function navGrades14() {
-//   const grades14Elem = document.querySelector(".grades14Button");
-//   grades14Elem.addEventListener("click", () => {
-//     const app = document.querySelector("#app");
-//     app.innerHTML = Grades14();
-//   });
-// }
 

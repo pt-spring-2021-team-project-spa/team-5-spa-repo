@@ -67,7 +67,7 @@ h1{
   color: #f4976c;
 }
 
-.card, .planetCard,.spaceCard,.artCard,.mysteryCard{
+/* .card, .planetCard,.spaceCard,.artCard,.mysteryCard{
   width: 15rem;
   height:20rem;
   word-wrap: break-word;
@@ -106,6 +106,10 @@ transition: .2s;
   height: 150px;
   border-radius: 50%;
 }
+.planet-image{
+  height: 100px;
+  width: 100px;
+} */
 .start {
   width: 15rem;
   word-wrap: break-word;
@@ -115,10 +119,7 @@ transition: .2s;
   padding-bottom: 10px;
 }
 
-.planet-image{
-  height: 100px;
-  width: 100px;
-}
+
 
 
 
@@ -141,4 +142,17 @@ transition: .2s;
 
 .selectGrade li:hover{
   background-color: #303c6c;
+}
+
+#home-div img{
+  height: 400px;
+  width: 400px;
+}
+
+
+#planets-div img{
+    max-width:500px;
+    max-height:500px;
+    width: auto;
+    height: auto;
 }
