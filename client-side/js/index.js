@@ -79,6 +79,8 @@ function showCard1() {
     const cards = document.querySelector(".cards");
     if ((cards.style.display = "none")) {
       showCard2();
+      showCard3();
+      showCard4();
     }
   });
   renderPlanetInfo();
