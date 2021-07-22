@@ -13,6 +13,11 @@ import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
 import AddStudent from "./Components/AddStudent";
 import Grades58 from "./Components/Grades58";
+import Games from "./Components/Games";
+import Contact from "./Components/Contact";
+import Faq from "./Components/Faq";
+import Terms from "./Components/Terms";
+import Privacy from "./Components/Privacy";
 
 buildPage();
 
@@ -24,7 +29,12 @@ function buildPage() {
   navHome();
   navGrades58();
   navGrades14();
-  //navAbout();
+  navGames();
+  navAbout();
+  navContact();
+  navFaq();
+  navTerms();
+  navPrivacy();
   navStart();
 }
 
@@ -51,6 +61,14 @@ function navGrades14() {
   gradesElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Grades14();
+  });
+}
+
+function navGames() {
+  const gamesElem = document.querySelector(".nav-list__games");
+  gamesElem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Games();
   });
 }
 
@@ -142,9 +160,41 @@ function renderParentInfo() {
 }
 
 function navAbout() {
-  const aboutElem = document.querySelector(".parents-about");
+  const aboutElem = document.querySelector(".header__parents_aboutUs");
   aboutElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = About();
+  });
+}
+
+function navContact() {
+  const contactElem = document.querySelector(".header__parents_contactUs");
+  contactElem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Contact();
+  });
+}
+
+function navFaq() {
+  const faqElem = document.querySelector(".header__parents_faq");
+  faqElem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Faq();
+  });
+}
+
+function navTerms() {
+  const termsElem = document.querySelector(".header__parents_terms");
+  termsElem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Terms();
+  });
+}
+
+function navPrivacy() {
+  const privacyElem = document.querySelector(".header__parents_privacy");
+  privacyElem.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Privacy();
   });
 }

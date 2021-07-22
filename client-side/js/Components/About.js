@@ -1,6 +1,5 @@
-
 export default function About(){
     return`
-    <h1>About Test Page</h1>
-`;
+    <h1>About Us</h1>
+    `;
     }
