@@ -11,8 +11,7 @@ import crud from "./crud/crud";
 import StudentInfo from "./rendering/studentInfo";
 import ParentInfo from "./rendering/parentInfo";
 import PlanetInfo from "./rendering/planetInfo";
-
-
+import Apod from "./Components/Apod";
 buildPage();
 
 function buildPage() {
@@ -22,8 +21,9 @@ function buildPage() {
   navParents();
   navLearning();
   navHome();
-  navAbout();
+ // navAbout();
   navGrades();
+  navApod();
 }
 
 function header() {
@@ -102,7 +102,7 @@ function navParents() {
 
 function renderParentInfo() {
   const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
+  app.addEventListener("click", (event) => {
     if (event.target.classList.contains("parent-name")) {
       const parentId = event.target.parentElem.querySelector("#parentId").value;
       crud.getRequest(parentId, (parent) => {
@@ -128,13 +128,13 @@ function navGrades() {
   });
 }
 
-function navAbout() {
-    const aboutElem = document.querySelector(".parents-about");
-    aboutElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    app.innerHTML = About();
-  });
-}
+// function navAbout() {
+//     const aboutElem = document.querySelector(".parents-about");
+//     aboutElem.addEventListener("click", () => {
+//     const app = document.querySelector("#app");
+//     app.innerHTML = About();
+//   });
+// }
 
 function navHome() {
   const homeElem = document.querySelector(".nav-list__home");
@@ -142,7 +142,16 @@ function navHome() {
     const app = document.querySelector("#app");
     app.innerHTML = Home();
   });
-}
+};
 
 
-
+function navApod() {
+  const apodElem = document.querySelector(".nav-list__apod");
+  apodElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    apiActions.getRequest("https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX", (apod) => {
+      console.log(apod);
+      app.innerHTML = Apod(apod);
+    });
+  })
+};
