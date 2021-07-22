@@ -45,14 +45,71 @@ function navGrades58() {
     const app = document.querySelector("#app");
     app.innerHTML = Grades58();
   });
-  shuffleCards();
+  showCard1();
 }
-function shuffleCards() {
+function showCard1() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
     if (event.target.classList.contains("cardInfo1")) {
       const card = document.createElement("div");
       card.setAttribute("class", "mystery-card");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
+      hideCards();
+    }
+    const cards = document.querySelector(".cards");
+    if ((cards.style.display = "none")) {
+      showCard2();
+    }
+  });
+  renderPlanetInfo();
+}
+function showCard2() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo2")) {
+      const card = document.createElement("div");
+      card.setAttribute("class", "mystery-card2");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
+      hideCards();
+    }
+    const cards = document.querySelector(".cards");
+    if ((cards.style.display = "none")) {
+      showCard3();
+    }
+  });
+  renderPlanetInfo();
+}
+function showCard3() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo3")) {
+      const card = document.createElement("div");
+      card.setAttribute("class", "mystery-card3");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
+      hideCards();
+    }
+    const cards = document.querySelector(".cards");
+    if ((cards.style.display = "none")) {
+      showCard4();
+    }
+  });
+  renderPlanetInfo();
+}
+function showCard4() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo4")) {
+      const card = document.createElement("div");
+      card.setAttribute("class", "mystery-card4");
       crud.getRequest("http://localhost:8080/api/planets", (planets) => {
         card.innerHTML = Planets(planets);
       });
