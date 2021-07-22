@@ -21,6 +21,7 @@ import Privacy from "./Components/Privacy";
 import Space from "./Components/Space";
 import Art from "./Components/Art";
 import Mystery from "./Components/Mystery";
+import { func } from "assert-plus";
 buildPage();
 
 function buildPage() {
@@ -38,6 +39,7 @@ function buildPage() {
   navTerms();
   navPrivacy();
   navStart();
+  gradeSelect();
 }
 
 function header() {
@@ -50,17 +52,27 @@ function footer() {
   footerElem.innerHTML = Footer();
 }
 
+function gradeSelect(){
+  const gradeElem = document.querySelector(".grades58Button")
+  gradeElem.addEventListener("click",()=>{
+    const app = document.querySelector("#app");
+      app.innerHTML = Grades58();
+  })
+
+}
+
 function navGrades58() {
   const grades58Elem = document.querySelector(".nav-list__grades58");
   grades58Elem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Grades58();
   });
+
 }
 
 function navGrades14() {
-  const gradesElem = document.querySelector(".nav-list__grades14");
-  gradesElem.addEventListener("click", () => {
+  const grades14Elem = document.querySelector(".nav-list__grades14");
+  grades14Elem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Grades14();
   });
@@ -276,3 +288,24 @@ function hideCards() {
   cards.style.display = "none";
   title.style.display="none";
 }
+
+
+// function navGrades58() {
+//   const grades58Elem = document.querySelector(".grades58Button");
+//   grades58Elem.addEventListener("click", () => {
+//     const app = document.querySelector("#app");
+//     app.innerHTML = Grades58();
+//   });
+//   grade58Select();
+// }
+
+
+
+// function navGrades14() {
+//   const grades14Elem = document.querySelector(".grades14Button");
+//   grades14Elem.addEventListener("click", () => {
+//     const app = document.querySelector("#app");
+//     app.innerHTML = Grades14();
+//   });
+// }
+

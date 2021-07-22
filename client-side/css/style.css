@@ -25,7 +25,7 @@ body {
 }
 
 h1{
-  margin: 3rem;
+  margin: 2rem;
   color: #303c6c;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -91,7 +91,9 @@ h1{
 
 .cards div:hover{
 transform: scale(1.1);
-border:5px solid #303c6c;
+box-shadow: 9px 9px 5px -3px rgba(0,0,0,0.33);
+-webkit-box-shadow: 9px 9px 5px -3px rgba(0,0,0,0.33);
+-moz-box-shadow: 9px 9px 5px -3px rgba(0,0,0,0.33);
 transition: .2s;
 }
 
@@ -111,4 +113,32 @@ transition: .2s;
   background-color: #f4976c;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.planet-image{
+  height: 100px;
+  width: 100px;
+}
+
+
+
+.selectGrade{
+  display: flex;  
+  justify-content: space-evenly;
+}
+
+.selectGrade li{
+  background-color: #f4976c;
+  color: white;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.selectGrade li:hover{
+  background-color: #303c6c;
 }
