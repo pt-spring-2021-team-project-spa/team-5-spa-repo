@@ -18,7 +18,9 @@ import Contact from "./Components/Contact";
 import Faq from "./Components/Faq";
 import Terms from "./Components/Terms";
 import Privacy from "./Components/Privacy";
-
+import Space from "./Components/Space";
+import Art from "./Components/Art";
+import Mystery from "./Components/Mystery";
 buildPage();
 
 function buildPage() {
@@ -197,4 +199,80 @@ function navPrivacy() {
     const app = document.querySelector('#app');
     app.innerHTML = Privacy();
   });
+}
+
+function navGrades58() {
+  const grades58Elem = document.querySelector(".nav-list__grades58");
+  grades58Elem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    app.innerHTML = Grades58();
+  });
+  planetCard();
+  spaceCard();
+  artCard();
+  mysteryCard();
+}
+function planetCard() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("planetCard")) {
+      const card = document.createElement("div");
+      console.log("Planets button")
+      card.setAttribute("class","planetsCard");
+      crud.getRequest("http://localhost:8080/api/planets",(planets)=>{
+          card.innerHTML = Planets(planets);
+      })
+
+      app.appendChild(card);
+      hideCards();
+    }
+  });
+  renderPlanetInfo();
+}
+
+function spaceCard() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("spaceCard")) {
+      const card = document.createElement("div");
+      console.log("Space Button")
+        card.innerHTML = Space();
+      app.appendChild(card);
+      hideCards();
+    }
+  });
+}
+
+function artCard() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("artCard")) {
+      const card = document.createElement("div");
+      console.log("Art Button")
+        card.innerHTML = Art();
+      app.appendChild(card);
+      hideCards();
+    }
+  });
+}
+
+function mysteryCard() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("mysteryCard")) {
+      const card = document.createElement("div");
+      console.log("Mystery Button")
+        card.innerHTML = Mystery();
+      app.appendChild(card);
+      hideCards();
+    }
+  });
+}
+
+
+function hideCards() {
+  const cards = document.querySelector(".cards");
+  const title = document.querySelector(".title")
+  cards.style.display = "none";
+  title.style.display="none";
 }
