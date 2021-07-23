@@ -6,13 +6,13 @@ export default function Planets(planets) {
       ${planets.map((planet) => {
         return `
           <li class="planet-info">
-          <img class='planet-img' src='${planet.imageUrl}'>
+          <img class='planet-img' width="250" height="250" src='${planet.imageUrl}'>
           <h3 class="planet-name">Planet: ${planet.name}</h3>
           <h4 class="planet-size">Diameter: ${planet.diameter}</h4>
           <p class="planet-distance">Distance From Sun: ${planet.distanceFromSun}</p>
           <p class="planet-temp">Average Temperature: ${planet.temperature}</p>
           <p class="planet-description">Description: ${planet.description}</p>
-          <input type="button" id='planetId' value='${planet.url}'>
+          <input type="hidden" id='planetId' value='${planet.url}'>
           </li>
           `;
       })}

@@ -58,6 +58,101 @@ function navGrades58() {
     const app = document.querySelector("#app");
     app.innerHTML = Grades58();
   });
+  showCard1();
+  showCard2();
+  showCard3();
+  showCard4();
+}
+function navApod() {
+  const apodElem = document.querySelector(".nav-list__apod");
+  apodElem.addEventListener("click", () => {
+    const app = document.querySelector("#app");
+    apiActions.getRequest(
+      "https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX",
+      (apod) => {
+        console.log(apod);
+        app.innerHTML = Apod(apod);
+      }
+    );
+  });
+}
+function showCard1() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo1")) {
+      const card = document.createElement("div");
+      card.setAttribute("class", "mystery-card");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
+      hideCards();
+    }
+    const cards = document.querySelector(".cards");
+    if ((cards.style.display = "none")) {
+      showCard2();
+      showCard3();
+      showCard4();
+    }
+  });
+  renderPlanetInfo();
+}
+function showCard2() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo2")) {
+      const card = document.createElement("div");
+      card.setAttribute("class", "mystery-card2");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
+      hideCards();
+    }
+    const cards = document.querySelector(".cards");
+    if ((cards.style.display = "none")) {
+      showCard3();
+    }
+  });
+  renderPlanetInfo();
+}
+function showCard3() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo3")) {
+      const card = document.createElement("div");
+      card.setAttribute("class", "mystery-card3");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
+      hideCards();
+    }
+    const cards = document.querySelector(".cards");
+    if ((cards.style.display = "none")) {
+      showCard4();
+    }
+  });
+  renderPlanetInfo();
+}
+function showCard4() {
+  const app = document.querySelector("#app");
+  app.addEventListener("click", () => {
+    if (event.target.classList.contains("cardInfo4")) {
+      const card = document.createElement("div");
+      card.setAttribute("class", "mystery-card4");
+      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+        card.innerHTML = Planets(planets);
+      });
+      app.appendChild(card);
+      hideCards();
+    }
+  });
+  renderPlanetInfo();
+}
+function hideCards() {
+  const cards = document.querySelector(".cards");
+  cards.style.display = "none";
 }
 
 function navGrades14() {
@@ -109,17 +204,18 @@ function renderStudentInfo() {
 }
 
 function navStart() {
-  const welcomeElem = document.querySelector(".nav-list__welcome__center");
-  welcomeElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    crud.getRequest("http://localhost:8080/api/students", (students) => {
-      app.innerHTML = AddStudent(students);
-    });
+  const loginButton = document.querySelector(".add_student_submitBtn");
+  const app = document.querySelector("#app");
+  loginButton.addEventListener("click", () => {
+    console.log("button firing");
+    // crud.getRequest("http://localhost:8080/api/students", (students) => {
+    //   app.innerHTML = AddStudent(students);
+    // })
   });
 }
 
 function navLearning() {
-  const learningElem = document.querySelector(".nav-list__learning");
+  const learningElem = document.querySelector(".nav-list__learn");
   learningElem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     crud.getRequest("http://localhost:8080/api/planets", (planets) => {

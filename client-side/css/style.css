@@ -42,6 +42,9 @@ h4 {
   height: 50%;
   width: 75%;
 }
+.add_student_button {
+  padding: 7px;
+}
 
 .nav-list li {
   border: 5px solid #d2fdff;

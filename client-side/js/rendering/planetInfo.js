@@ -7,7 +7,7 @@ export default function PlanetInfo(planetInfo) {
         <p>Planet: ${planet.name}</p>
         <p>Diameter: ${planet.diameter}</p>
         <p>Distance From Sun: ${planet.distanceFromSun}</p>
-        <p>Average Temperature: ${planet.avgTemperature}</p>
+        <p>Average Temperature: ${planet.temperature}</p>
         <p>Description: ${planet.description}</p>
         <p>Solar System: ${planet.solarSystem}</p>
         `;
