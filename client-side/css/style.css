@@ -65,6 +65,7 @@ h1{
 
 .footer li:hover {
   color: #f4976c;
+  cursor: pointer;
 }
 
 /* .card, .planetCard,.spaceCard,.artCard,.mysteryCard{

@@ -18,7 +18,7 @@ padding: 25px;}
     justify-content: space-evenly;
 }
 
-.footer {  
+.footer ul{  
     align-items: center;  
     display: flex;  
     justify-content: space-between; 
@@ -26,4 +26,9 @@ padding: 25px;}
       max-width: 90%; 
        width: 900px;
     }
+
+.footer div {
+    padding: 1rem;
+    text-align: center;
+}
 

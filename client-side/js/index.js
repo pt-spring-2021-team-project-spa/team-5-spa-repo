@@ -33,6 +33,10 @@ function buildPage() {
   navGrades58();
   navGrades14();
   navGames();
+  footerFaq();
+  footerAbout();
+  footerContact();
+  footerTerms();
   navAbout();
   navContact();
   navFaq();
@@ -213,78 +217,35 @@ function navPrivacy() {
   });
 }
 
-function navGrades58() {
-  const grades58Elem = document.querySelector(".nav-list__grades58");
-  grades58Elem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    app.innerHTML = Grades58();
-  });
-  planetCard();
-  spaceCard();
-  artCard();
-  mysteryCard();
-}
-function planetCard() {
-  const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
-    if (event.target.classList.contains("planetCardImg")) {
-      const card = document.createElement("div");
-      console.log("Planets button")
-      card.setAttribute("class","planetsCard");
-      crud.getRequest("http://localhost:8080/api/planets",(planets)=>{
-          card.innerHTML = Planets(planets);
-      })
 
-      app.appendChild(card);
-      hideCards();
-    }
-  });
-  renderPlanetInfo();
-}
-
-function spaceCard() {
-  const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
-    if (event.target.classList.contains("spaceCardImg")) {
-      const card = document.createElement("div");
-      console.log("Space Button")
-        card.innerHTML = Space();
-      app.appendChild(card);
-      hideCards();
-    }
+function footerFaq() {
+  const footerFaqElm = document.querySelector(".footer__faq");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Faq();
   });
 }
 
-function artCard() {
-  const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
-    if (event.target.classList.contains("artCardImg")) {
-      const card = document.createElement("div");
-      console.log("Art Button")
-        card.innerHTML = Art();
-      app.appendChild(card);
-      hideCards();
-    }
+function footerAbout() {
+  const footerFaqElm = document.querySelector(".footer__about");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = About();
   });
 }
 
-function mysteryCard() {
-  const app = document.querySelector("#app");
-  app.addEventListener("click", () => {
-    if (event.target.classList.contains("mysteryCardImg")) {
-      const card = document.createElement("div");
-      console.log("Mystery Button")
-        card.innerHTML = Mystery();
-      app.appendChild(card);
-      hideCards();
-    }
+function footerContact() {
+  const footerFaqElm = document.querySelector(".footer__contact");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Contact();
   });
 }
 
-
-function hideCards() {
-  const cards = document.querySelector("#grades-app");
-  cards.style.display = "none";
+function footerTerms() {
+  const footerFaqElm = document.querySelector(".footer__terms");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Terms();
+  });
 }
-
-
