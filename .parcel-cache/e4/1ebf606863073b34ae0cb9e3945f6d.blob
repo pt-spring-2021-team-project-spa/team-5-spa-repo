@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents</title>
+  </head>
+  <body></body>
+  <footer>
+    <div class="links">
+      <a href="#" class="FAQ"></a>
+      <a href="#" class="About Us"></a>
+      <a href="#" class="Contact US"></a>
+      <a href="#" class="Terms of Policy"></a>
+      <a href="#" class="NASA APOD"></a>
+    </div>
+    <h1>© wcci 2021</h1>
+  </footer>
+</html>
+<script src="/index.HASH_REF_1cf92b8ac789bf0c8bd4b6d53ebff041.js"></script>

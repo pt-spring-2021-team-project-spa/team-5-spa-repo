@@ -1,6 +1,7 @@
 import Home from "./Home";
 export default function Planets(planets) {
   return `
+  <div id="planets-div">
       <h1>Our Solar System Is Amazing! Take a Peak!</h1>
       <ul>
       ${planets.map((planet) => {
@@ -17,6 +18,6 @@ export default function Planets(planets) {
           `;
       })}
       </ul>
-      
+      </div>
       `;
 }

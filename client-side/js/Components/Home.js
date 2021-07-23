@@ -1,29 +1,8 @@
-import planetImg from "../../assets/planetsCard.jpg";
+
 export default function Home() {
   return `
-    <h1>Home Page Test</h1>
-    <div class="cards">
-    <div class="card">
-    <img class="planetCardImg" src='${planetImg}'>
-    <h3>Planets</h3>
-    <p class="cardInfo">Quick Overview of planets category</p>
-    </div>
-    <div class="card">
-    <img class="planetCardImg" src='${planetImg}'>
-    <h3>Planets</h3>
-    <p class="cardInfo">Quick Overview of planets category</p>
-    </div>
-    <div class="card">
-    <img class="planetCardImg" src='${planetImg}'>
-    <h3>Planets</h3>
-    <p class="cardInfo">Quick Overview of planets category</p>
-    </div>
-    <div class="card">
-    <img class="planetCardImg" src='${planetImg}'>
-    <h3>Planets</h3>
-    <p class="cardInfo">Quick Overview of planets category</p>
-    </div>
-
+  <div id="home-div">
+    <h1>JacKr Learning</h1>
     </div>
     `;
 }
