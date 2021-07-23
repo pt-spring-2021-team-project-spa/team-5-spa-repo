@@ -28,3 +28,43 @@ body {
   text-align: center;
   flex-wrap: wrap;
 }
+
+.team5 .team-member {
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 25px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8e8e;
+  position: relative;
+}
+
+.team5 .team-member h3 {
+  color: #0862c2;
+  font-size: 26px;
+  margin-top: 50px;
+}
+
+.team5 .team-member p.role {
+  color: black;
+  margin: 12px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.team5 .team-member .team_img {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: #fff;
+}
+
+.team5 .team-member .team_img img {
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+}
