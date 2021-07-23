@@ -30,6 +30,10 @@ function buildPage() {
   navGrades58();
   navGrades14();
   navGames();
+  footerFaq();
+  footerAbout();
+  footerContact();
+  footerTerms();
   navAbout();
   navContact();
   navFaq();
@@ -196,5 +200,37 @@ function navPrivacy() {
   privacyElem.addEventListener('click', () => {
     const app = document.querySelector('#app');
     app.innerHTML = Privacy();
+  });
+}
+
+function footerFaq() {
+  const footerFaqElm = document.querySelector(".footer__faq");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Faq();
+  });
+}
+
+function footerAbout() {
+  const footerFaqElm = document.querySelector(".footer__about");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = About();
+  });
+}
+
+function footerContact() {
+  const footerFaqElm = document.querySelector(".footer__contact");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Contact();
+  });
+}
+
+function footerTerms() {
+  const footerFaqElm = document.querySelector(".footer__terms");
+  footerFaqElm.addEventListener('click', () => {
+    const app = document.querySelector('#app');
+    app.innerHTML = Terms();
   });
 }
