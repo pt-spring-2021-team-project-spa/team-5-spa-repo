@@ -24,7 +24,7 @@ body {
   background-position: top center;
 }
 
-h1{
+h1 {
   margin: 2rem;
   color: #303c6c;
   font-family: Arial, Helvetica, sans-serif;
@@ -71,9 +71,13 @@ h1{
   cursor: pointer;
 }
 
- .card, .planetCard,.spaceCard,.artCard,.mysteryCard{
+.card,
+.planetCard,
+.spaceCard,
+.artCard,
+.mysteryCard {
   width: 15rem;
-  height:20rem;
+  height: 20rem;
   word-wrap: break-word;
   border-radius: 50px;
   background-color: #f4976c;
@@ -81,24 +85,24 @@ h1{
   padding-bottom: 10px;
 }
 
-.cards h3{
-  color:#303c6c ;
+.cards h3 {
+  color: #303c6c;
   padding: 10px;
 }
 
-.cards  {
+.cards {
   margin: 10px;
   display: flex;
   justify-content: space-around;
   gap: 10px;
 }
 
-.cards div:hover{
-transform: scale(1.1);
-box-shadow: 9px 9px 5px -3px rgba(0,0,0,0.33);
--webkit-box-shadow: 9px 9px 5px -3px rgba(0,0,0,0.33);
--moz-box-shadow: 9px 9px 5px -3px rgba(0,0,0,0.33);
-transition: .2s;
+.cards div:hover {
+  transform: scale(1.1);
+  box-shadow: 9px 9px 5px -3px rgba(0, 0, 0, 0.33);
+  -webkit-box-shadow: 9px 9px 5px -3px rgba(0, 0, 0, 0.33);
+  -moz-box-shadow: 9px 9px 5px -3px rgba(0, 0, 0, 0.33);
+  transition: 0.2s;
 }
 
 .cardInfo {
@@ -110,11 +114,11 @@ transition: .2s;
   height: 150px;
   border-radius: 50%;
 }
-.planet-image{
+.planet-image {
   height: 100px;
   width: 100px;
-} */
-.start {
+}
+*/ .start {
   width: 15rem;
   word-wrap: break-word;
   border-radius: 50px;
@@ -122,12 +126,12 @@ transition: .2s;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-.selectGrade{
-  display: flex;  
+.selectGrade {
+  display: flex;
   justify-content: space-evenly;
 }
 
-.selectGrade li{
+.selectGrade li {
   background-color: #f4976c;
   color: white;
   width: 250px;
@@ -139,25 +143,25 @@ transition: .2s;
   justify-content: center;
 }
 
-.selectGrade li:hover{
+.selectGrade li:hover {
   background-color: #303c6c;
 }
 
-#home-div img{
+#home-div img {
   height: 400px;
   width: 400px;
 }
-.apodImage{
-height:400 px;
-width: 400 px;
+.apodImage {
+  height: 400px;
+  width: 400px;
 }
-#planets-div img{
-    max-width:500px;
-    max-height:500px;
-    width: auto;
-    height: auto;
+#planets-div img {
+  max-width: 500px;
+  max-height: 500px;
+  width: auto;
+  height: auto;
 }
-.epicImage{
-  height:400px;
-  width:400px;
+.epicImage {
+  height: 400px;
+  width: 400px;
 }

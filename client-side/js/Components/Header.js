@@ -18,7 +18,6 @@ export default function Header() {
             </ul>
         </div>
     </div>
-    <h1 class="header__title">Space JacKr</h1> 
     <ul class = "nav-list">
         <li class="nav-list__home">
             <p><i class="fas fa-home"></i></p>
