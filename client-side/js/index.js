@@ -24,7 +24,7 @@ function buildPage() {
   navHome();
   navGrades58();
   navGrades14();
-  //navAbout();
+  navAbout();
   navStart();
 }
 
