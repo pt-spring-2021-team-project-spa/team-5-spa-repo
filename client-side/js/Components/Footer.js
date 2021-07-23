@@ -1,9 +1,9 @@
 export default function Footer(){
     return`
     <ul class="footer">
-    <li>FAQ</li>
-    <li>About</li>
-    <li>Contact</li>
-    <li>Terms</li>
+    <li class = "footer__faq">FAQ</li>
+    <li class = "footer__about">About</li>
+    <li class = "footer__contact">Contact</li>
+    <li class = "footer__terms">Terms</li>
     </ul>`;
     }
