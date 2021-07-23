@@ -1,0 +1,16 @@
+
+.apod__container img{
+    height: 70%;
+    width: 70%;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.apod__container h2 {
+    color:#303c6c ;
+    margin-bottom: 20px;
+}
+
+.apod__container p{
+    color:#303c6c ;
+}
