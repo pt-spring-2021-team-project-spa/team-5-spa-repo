@@ -5,5 +5,9 @@ export default function Footer(){
     <li class = "footer__about">About</li>
     <li class = "footer__contact">Contact</li>
     <li class = "footer__terms">Terms</li>
-    </ul>`;
+    </ul>
+    <div>
+        <small>&copy JacKr Enterprises</small>
+    </div>
+    `;
     }
