@@ -18,7 +18,10 @@ import Contact from "./Components/Contact";
 import Faq from "./Components/Faq";
 import Terms from "./Components/Terms";
 import Privacy from "./Components/Privacy";
-
+import Space from "./Components/Space";
+import Art from "./Components/Art";
+import Mystery from "./Components/Mystery";
+import { func } from "assert-plus";
 buildPage();
 
 function buildPage() {
@@ -40,6 +43,7 @@ function buildPage() {
   navTerms();
   navPrivacy();
   navStart();
+  gradeSelect();
 }
 
 function header() {
@@ -52,17 +56,27 @@ function footer() {
   footerElem.innerHTML = Footer();
 }
 
+function gradeSelect(){
+  const gradeElem = document.querySelector(".grades58Button")
+  gradeElem.addEventListener("click",()=>{
+    const app = document.querySelector("#app");
+      app.innerHTML = Grades58();
+  })
+
+}
+
 function navGrades58() {
   const grades58Elem = document.querySelector(".nav-list__grades58");
   grades58Elem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Grades58();
   });
+
 }
 
 function navGrades14() {
-  const gradesElem = document.querySelector(".nav-list__grades14");
-  gradesElem.addEventListener("click", () => {
+  const grades14Elem = document.querySelector(".nav-list__grades14");
+  grades14Elem.addEventListener("click", () => {
     const app = document.querySelector("#app");
     app.innerHTML = Grades14();
   });
@@ -202,6 +216,7 @@ function navPrivacy() {
     app.innerHTML = Privacy();
   });
 }
+
 
 function footerFaq() {
   const footerFaqElm = document.querySelector(".footer__faq");

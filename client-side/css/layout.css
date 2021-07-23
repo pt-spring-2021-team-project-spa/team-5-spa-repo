@@ -1,9 +1,9 @@
 
 #app {  
     margin: -5rem auto;  
-    margin-bottom: 1rem;
-    max-width: 90%;  
-    min-height: 75vh;  
+    margin-bottom: 1rem; 
+    height:fit-content; 
+    min-height: 20rem; 
     width: 1000px;  
     text-align: center;
 padding: 25px;}
