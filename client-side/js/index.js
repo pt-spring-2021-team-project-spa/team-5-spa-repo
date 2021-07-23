@@ -324,6 +324,7 @@ function footerAbout() {
 function footerContact() {
   const footerFaqElm = document.querySelector(".footer__contact");
   footerFaqElm.addEventListener("click", () => {
+    console.log = "it works"
     location.href = "contactUs.html";
   });
 }
