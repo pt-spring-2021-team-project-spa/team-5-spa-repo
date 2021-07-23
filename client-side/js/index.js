@@ -21,7 +21,11 @@ import Privacy from "./Components/Privacy";
 import Space from "./Components/Space";
 import Art from "./Components/Art";
 import Mystery from "./Components/Mystery";
+import Apod from "./Components/Apod";
+import apiActions from "./api-actions/api.js";
+import api from "./api-actions/api.js";
 import { func } from "assert-plus";
+
 buildPage();
 
 function buildPage() {
@@ -71,21 +75,22 @@ function navGrades58() {
     app.innerHTML = Grades58();
   });
   showCard1();
-  
+  showCard2();
+  showCard3();
+  showCard4();
 }
-function navApod() {
-  const apodElem = document.querySelector(".nav-list__apod");
-  apodElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    apiActions.getRequest(
-      "https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX",
-      (apod) => {
-        console.log(apod);
-        app.innerHTML = Apod(apod);
-      }
-    );
-  });
-}
+// function Apod() {
+//   apodElem.addEventListener("click", () => {
+//     const app = document.querySelector("#app");
+//     apiActions.getRequest(
+//       "https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX",
+//       (apod) => {
+//         console.log(apod);
+//         app.innerHTML = Apod(apod);
+//       }
+//     );
+//   });
+// }
 function showCard1() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
@@ -98,10 +103,6 @@ function showCard1() {
       app.appendChild(card);
       hideCards();
     }
-    const cards = document.querySelector(".cards");
-    if ((cards.style.display = "none")) {
-      showCard2();
-    }
   });
   renderPlanetInfo();
 }
@@ -111,15 +112,15 @@ function showCard2() {
     if (event.target.classList.contains("cardInfo2")) {
       const card = document.createElement("div");
       card.setAttribute("class", "mystery-card2");
-      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
-        card.innerHTML = Planets(planets);
-      });
+      apiActions.getRequest(
+        "https://api.nasa.gov/planetary/apod?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX",
+        (apod) => {
+          console.log(apod);
+          card.innerHTML = Apod(apod);
+        }
+      );
       app.appendChild(card);
       hideCards();
-    }
-    const cards = document.querySelector(".cards");
-    if ((cards.style.display = "none")) {
-      showCard3();
     }
   });
   renderPlanetInfo();
@@ -135,10 +136,6 @@ function showCard3() {
       });
       app.appendChild(card);
       hideCards();
-    }
-    const cards = document.querySelector(".cards");
-    if ((cards.style.display = "none")) {
-      showCard4();
     }
   });
   renderPlanetInfo();
