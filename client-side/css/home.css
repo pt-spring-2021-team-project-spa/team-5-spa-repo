@@ -1,0 +1,26 @@
+#home-div{
+        position: relative;
+        text-align: center;
+}
+
+#home-div p{
+    color:#303c6c ;
+    font-weight: bold;
+}
+
+.space-splash{
+width:30rem;
+height: auto;
+border-radius: 50px;
+margin-bottom: 20px;
+}
+
+.home-p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+    color: #FFFFFF;
+text-shadow: 3px 2px 0 #555;
+}
