@@ -1,7 +1,7 @@
 export default function Faq(){
     return`
-    <div class="container">
-      <h1>Frequently Asked Questions</h1>
+    <div class="faq__container">
+      <h1 class="faq__title">Frequently Asked Questions</h1>
     </div>
     <div class="faq">
       <h2>What is Lorem ipsom?</h2>
