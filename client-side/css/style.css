@@ -71,7 +71,7 @@ h1{
   cursor: pointer;
 }
 
-/* .card, .planetCard,.spaceCard,.artCard,.mysteryCard{
+ .card, .planetCard,.spaceCard,.artCard,.mysteryCard{
   width: 15rem;
   height:20rem;
   word-wrap: break-word;
@@ -122,11 +122,6 @@ transition: .2s;
   padding-top: 10px;
   padding-bottom: 10px;
 }
-
-
-
-
-
 .selectGrade{
   display: flex;  
   justify-content: space-evenly;
