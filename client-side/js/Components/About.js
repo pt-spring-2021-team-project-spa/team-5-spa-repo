@@ -1,5 +1,5 @@
-export default function About(){
-    return`
+export default function About() {
+  return `
     <div class="team-container">
       <h1>Our Team</h1>
       <div class="team5">
@@ -31,7 +31,7 @@ export default function About(){
         </div>
         <div class="team-member">
           <div class="team_img">
-            <img src="client-side/assets/filsan.jpg" alt="Filsan_img" />
+            <img src="client-side/assets/filsan.jpeg" alt="Filsan_img" />
           </div>
           <h3>Filsan Madar</h3>
           <p class="role">Full Stack Developer</p>
@@ -71,4 +71,4 @@ export default function About(){
       </div>
     </div>
     `;
-    }
+}
