@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(client-side/assets/spaceBackground.jpg);
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.team-container {
+  margin-top: 10%;
+}
+
+.team-container h1 {
+  font-family: "Allura", bold;
+  font-size: 52px;
+  margin-bottom: 60px;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.team5 {
+  display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
+}
