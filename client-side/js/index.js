@@ -23,6 +23,8 @@ import Art from "./Components/Art";
 import Mystery from "./Components/Mystery";
 import Apod from "./Components/Apod";
 import apiActions from "./api-actions/api.js";
+import Epic from "./Components/Epic";
+import FemaleArt from "./Components/FemaleArt";
 import api from "./api-actions/api.js";
 import { func } from "assert-plus";
 
@@ -125,20 +127,24 @@ function showCard2() {
   });
   renderPlanetInfo();
 }
+
 function showCard3() {
   const app = document.querySelector("#app");
   app.addEventListener("click", () => {
     if (event.target.classList.contains("cardInfo3")) {
       const card = document.createElement("div");
       card.setAttribute("class", "mystery-card3");
-      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
-        card.innerHTML = Planets(planets);
-      });
+      api.getRequest(
+        "https://api.nasa.gov/EPIC/api/natural?api_key=oUr2pzLOuwjgmfRew8Jna0IkUEJou0Zt30a5jIeX",
+        (epic) => {
+          console.log(epic);
+          card.innerHTML = Epic(epic);
+        }
+      );
       app.appendChild(card);
       hideCards();
     }
   });
-  renderPlanetInfo();
 }
 function showCard4() {
   const app = document.querySelector("#app");
@@ -146,12 +152,72 @@ function showCard4() {
     if (event.target.classList.contains("cardInfo4")) {
       const card = document.createElement("div");
       card.setAttribute("class", "mystery-card4");
-      crud.getRequest("http://localhost:8080/api/planets", (planets) => {
-        card.innerHTML = Planets(planets);
-      });
-      app.appendChild(card);
-      hideCards();
+      const getWomanUrl =
+        "https://collectionapi.metmuseum.org/public/collection/v1/search?q=planet";
+      const apiLink =
+        "https://collectionapi.metmuseum.org/public/collection/v1/objects/";
+
+      fetch(`${getWomanUrl}`)
+        .then((response) => response.json())
+        .then((data) => {
+          return data;
+        })
+        .then((data) => {
+          let objectIDs = data.objectIDs;
+          let objectID =
+            objectIDs[Math.floor(Math.random() * objectIDs.length)]; // Select a random Id
+          console.log(objectID);
+
+          fetch(`${apiLink}` + objectID)
+            .then((resp) => resp.json())
+            .then((data) => {
+              console.log(data);
+              app.innerHTML = FemaleArt(data);
+
+              let title = document.querySelector(".title");
+              title.innerHTML = `${data.title} `;
+
+              let department = document.querySelector(".department");
+              department.innerHTML = `Department: ${data.department} `;
+
+              if (`${data.culture}` === "") {
+              } else {
+                let culture = document.querySelector(".culture");
+                culture.innerHTML = `Culture: ${data.culture} `;
+              }
+
+              if (`${data.period}` === "") {
+              } else {
+                let period = document.querySelector(".period");
+                period.innerHTML = `Period: ${data.period}`;
+              }
+
+              let objectEndDate = document.querySelector(".objectEndDate");
+              objectEndDate.innerHTML = `Date: ${data.objectEndDate} `;
+
+              let primaryImage = document.querySelector(".photo");
+              primaryImage.innerHTML = `<img src="${data.primaryImage}" class="primaryImage" > `;
+
+              let artistDisplayName =
+                document.querySelector(".artistDisplayName");
+              artistDisplayName.innerHTML = `${data.artistDisplayName} `;
+
+              let artistNationality =
+                document.querySelector(".artistNationality");
+              artistNationality.innerHTML = `${data.artistNationality} `;
+
+              let artistDisplayBio =
+                document.querySelector(".artistDisplayBio");
+              artistDisplayBio.innerHTML = `${data.artistDisplayBio} `;
+            });
+        });
     }
+
+    crud.getRequest("http://localhost:8080/api/planets", (planets) => {
+      card.innerHTML = FemaleArt(femaleArt);
+    });
+    app.appendChild(card);
+    hideCards();
   });
   renderPlanetInfo();
 }

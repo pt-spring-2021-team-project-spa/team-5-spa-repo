@@ -1,7 +1,7 @@
 export default function FemaleArt(data) {
   return `
     <div class="femaleArt__container">
-        <h1 id="title">Female Art of The Metropolitan Museum of Art</h1>
+        <h1 id="title">Art About Planets at The Metropolitan Museum of Art</h1>
         <p class="show-id"></p>
     
               <div class="photo">

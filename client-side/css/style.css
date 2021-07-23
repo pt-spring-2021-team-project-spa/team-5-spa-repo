@@ -147,11 +147,17 @@ transition: .2s;
   height: 400px;
   width: 400px;
 }
-
-
+.apodImage{
+height:400 px;
+width: 400 px;
+}
 #planets-div img{
     max-width:500px;
     max-height:500px;
     width: auto;
     height: auto;
+}
+.epicImage{
+  height:400px;
+  width:400px;
 }
