@@ -1,13 +1,16 @@
-import planetImg from "../../assets/planetsCard.jpg";
+
 import spaceImg from "../../assets/space.jpg";
 import earthImg from "../../assets/earth.jpg";
 import questionImg from "../../assets/question.jpg";
+import saturn from "../../assets/saturnImg.jpg"
+
+
 export default function Grades58() {
   return `
     <h1>Our Solar System</h1>
     <div class="cards">
     <div class="card">
-    <img class="planetCardImg" src='${planetImg}'>
+    <img class="planetCardImg" src='${saturn}'>
     <h3>Planets</h3>
     <p class="cardInfo1">Click Here!</p>
     </div>
