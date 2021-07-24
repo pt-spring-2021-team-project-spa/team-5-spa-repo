@@ -1,11 +1,18 @@
-export default function About(){
-    return`
+import adam from "../../assets/adam.jpg"
+import filsan from "../../assets/filsan.jpg"
+import rose from "../../assets/rose.jpg"
+import danielle from "../../assets/dbosworth.jpg"
+import jordan from "../../assets/jordan.jpg"
+
+
+export default function About() {
+  return `
     <div class="team-container">
       <h1>Our Team</h1>
       <div class="team5">
         <div class="team-member">
           <div class="team_img">
-            <img src="client-side/assets/adam.jpeg" alt="Adam_img" />
+            <img src="${adam}" alt="Adam_img" />
           </div>
           <h3>Adam Heinemen</h3>
           <p class="role">Full Stack Developer</p>
@@ -15,7 +22,7 @@ export default function About(){
         </div>
         <div class="team-member">
           <div class="team_img">
-            <img src="client-side/assets/dbosworth.png" alt="Danielle_img" />
+            <img src="${danielle}" alt="Danielle_img" />
           </div>
           <h3>Danielle Bosworth</h3>
           <p class="role">Full Stack Developer</p>
@@ -28,7 +35,7 @@ export default function About(){
         </div>
         <div class="team-member">
           <div class="team_img">
-            <img src="client-side/assets/filsan.jpg" alt="Filsan_img" />
+            <img src="${filsan}" alt="Filsan_img" />
           </div>
           <h3>Filsan Madar</h3>
           <p class="role">Full Stack Developer</p>
@@ -39,7 +46,7 @@ export default function About(){
         </div>
         <div class="team-member">
           <div class="team_img">
-            <img src="client-side/assets/jordan.jpeg" alt="Jordan_img" />
+            <img src="${jordan}" alt="Jordan_img" />
           </div>
           <h3>Jordan Easter</h3>
           <p class="role">Full Stack Developer</p>
@@ -49,7 +56,7 @@ export default function About(){
         </div>
         <div class="team-member">
           <div class="team_img">
-            <img src="client-side/assets/rose.jpeg" alt="Rose_img" />
+            <img src="${rose}" alt="Rose_img" />
           </div>
           <h3>Rose Holmes-Minton</h3>
           <p class="role">Full Stack Developer</p>
@@ -60,4 +67,4 @@ export default function About(){
       </div>
     </div>
     `;
-    }
+}
