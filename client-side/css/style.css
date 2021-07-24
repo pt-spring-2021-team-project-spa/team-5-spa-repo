@@ -77,12 +77,13 @@ h1 {
 .artCard,
 .mysteryCard {
   width: 15rem;
-  height: 20rem;
+  height: fit-content;
   word-wrap: break-word;
   border-radius: 50px;
   background-color: #f4976c;
   padding-top: 10px;
   padding-bottom: 10px;
+  font-size: 30px;
 }
 
 .cards h3 {
@@ -112,6 +113,7 @@ h1 {
 .planetCardImg {
   border: 5px solid #d2fdff;
   height: 150px;
+  width: 150px;
   border-radius: 50%;
 }
 .planet-image {
@@ -164,4 +166,8 @@ h1 {
 .epicImage {
   height: 400px;
   width: 400px;
+}
+
+.cards p {
+  cursor: pointer;
 }
