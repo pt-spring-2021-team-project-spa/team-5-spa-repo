@@ -21,6 +21,7 @@ import Space from "./Components/Space";
 import Art from "./Components/Art";
 import Mystery from "./Components/Mystery";
 import { func } from "assert-plus";
+import ContactUs from "./Components/ContactUs"
 buildPage();
 
 function buildPage() {
@@ -277,7 +278,8 @@ function navAbout() {
 function navContact() {
   const contactElem = document.querySelector(".header__parents_contactUs");
   contactElem.addEventListener("click", () => {
-    location.href = "contactUs.html";
+    const app = document.querySelector('#app');
+    app.innerHTML = ContactUs();
   });
 }
 
@@ -324,8 +326,8 @@ function footerAbout() {
 function footerContact() {
   const footerFaqElm = document.querySelector(".footer__contact");
   footerFaqElm.addEventListener("click", () => {
-    console.log = "it works"
-    location.href = "contactUs.html";
+    const app = document.querySelector('#app');
+    app.innerHTML = ContactUs();
   });
 }
 
