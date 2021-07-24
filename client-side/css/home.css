@@ -8,8 +8,17 @@
     font-weight: bold;
 }
 
+#home-div img{
+    color:#303c6c ;
+    font-weight: bold;
+    width: 70%;
+height: auto;
+border-radius: 50px;
+margin-bottom: 20px;
+}
+
 .space-splash{
-width: 100px;
+width: 200px;
 height: auto;
 border-radius: 50px;
 margin-bottom: 20px;
