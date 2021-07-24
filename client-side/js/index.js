@@ -14,7 +14,6 @@ import PlanetInfo from "./rendering/planetInfo";
 import AddStudent from "./Components/AddStudent";
 import Grades58 from "./Components/Grades58";
 import Games from "./Components/Games";
-import Contact from "./Components/Contact";
 import Faq from "./Components/Faq";
 import Terms from "./Components/Terms";
 import Privacy from "./Components/Privacy";
@@ -341,8 +340,7 @@ function navAbout() {
 function navContact() {
   const contactElem = document.querySelector(".header__parents_contactUs");
   contactElem.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    app.innerHTML = Contact();
+    location.href = "contactUs.html";
   });
 }
 
@@ -389,8 +387,8 @@ function footerAbout() {
 function footerContact() {
   const footerFaqElm = document.querySelector(".footer__contact");
   footerFaqElm.addEventListener("click", () => {
-    const app = document.querySelector("#app");
-    app.innerHTML = Contact();
+    console.log = "it works"
+    location.href = "contactUs.html";
   });
 }
 
