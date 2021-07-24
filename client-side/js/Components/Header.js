@@ -23,6 +23,11 @@ export default function Header() {
             <p><i class="fas fa-home"></i></p>
             <p>Home</p>
         </li>
+        <li class="nav-list__grades14">
+            <p><i class="fas fa-graduation-cap"></i></p>
+            <p>Grades 1-4</p>
+        </li>
+    </li>
         <li class="nav-list__grades58">
             <p><i class="fas fa-graduation-cap"></i></p>
             <p>Learning</p>
