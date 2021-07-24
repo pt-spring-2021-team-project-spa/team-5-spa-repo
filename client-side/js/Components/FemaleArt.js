@@ -17,7 +17,7 @@ export default function FemaleArt(data) {
               <p class="show-id"></p>
     
     
-              <button id="nextButton">Next</button>
+
           </div>
     `;
 }
