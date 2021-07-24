@@ -10,17 +10,17 @@ export default function Grades58() {
     </div>
     <div class="card">
     <img class="planetCardImg" src='${planetImg}'>
-    <h3>Planets</h3>
+    <h3>Space</h3>
     <p class="cardInfo2">Quick Overview of planets category</p>
     </div>
     <div class="card">
     <img class="planetCardImg" src='${planetImg}'>
-    <h3>Planets</h3>
+    <h3>Blue Marble</h3>
     <p class="cardInfo3">Quick Overview of planets category</p>
     </div>
     <div class="card">
     <img class="planetCardImg" src='${planetImg}'>
-    <h3>Planets</h3>
+    <h3>Mystery</h3>
     <p class="cardInfo4">Quick Overview of planets category</p>
     </div>
 

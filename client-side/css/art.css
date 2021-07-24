@@ -1,0 +1,15 @@
+.femaleArt__container img{
+    height: 70%;
+    width: 70%;
+    border-radius: 50px;
+    margin-bottom: 30px;
+}
+
+.femaleArt__container p {
+    color:#303c6c ;
+}
+
+.femaleArt__container h4 {
+    color:#303c6c ;
+    font-size: 16px;
+}
